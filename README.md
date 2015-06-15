@@ -1,5 +1,8 @@
-# WordPress MAMP Wordpress Install Web Interface (beta)
+# WordPress MAMP Wordpress Install Web Interface
 Install the latest version of wordpress from your browser using localhost. This web app will guide you to get your local dev site up and running in matter of seconds. 
+
+## Command Line Version
+link: https://github.com/michelve/wordpress-mamp-localhost-generator
 
 1.Get Latest version of wordpress
 2. Setup wordpress
@@ -23,9 +26,9 @@ Install the latest version of wordpress from your browser using localhost. This 
 
 ## Screenshots
 
-<img src="https://raw.githubusercontent.com/michelve/wordpress-mamp-localhost-generator/master/web/core/screenshots/screenshot1.png"/>
+<img src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/screenshot1.png"/>
 
-<img src="https://raw.githubusercontent.com/michelve/wordpress-mamp-localhost-generator/master/web/core/screenshots/screenshot2.png"/>
+<img src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/screenshot2.png"/>
 
-<img src="https://raw.githubusercontent.com/michelve/wordpress-mamp-localhost-generator/master/web/core/screenshots/screenshot3.png"/>
+<img src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/screenshot3.png"/>
 
