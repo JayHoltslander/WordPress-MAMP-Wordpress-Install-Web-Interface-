@@ -1,12 +1,17 @@
 # WordPress MAMP Wordpress Install Web Interface (beta)
 Install the latest version of wordpress from your browser using localhost. This web app will guide you to get your local dev site up and running in matter of seconds. 
 
+1.Get Latest version of wordpress
+2. Setup wordpress
+3. Create Database
+4. Create Config file
+5. Install Wordpress
+6. You are Done
+
 ## Requirements 
 
 1. MAMP if you don't have MAMP you can grab the latest version from: https://www.mamp.info/en/downloads/ (you don't need the PRO version)
 
-## Web Script
-Simple to use web app. Simply fill the input and click submit and you are done, from host creating to localhost address to wordpress install.
 
 ## How to use
 
