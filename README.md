@@ -22,7 +22,8 @@ link: https://github.com/michelve/wordpress-mamp-localhost-generator
 
 3. Scroll to the bottom of the file and locate the following lines (around 524–525):
 
-	`Virtual Hosts__
+	`Virtual Hosts
+	
 	 #Include /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf`
 
 5. **Remove the hash** (pound #) sign from the beginning of the line that begins with Include:
