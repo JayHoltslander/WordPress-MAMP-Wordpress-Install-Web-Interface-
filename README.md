@@ -15,6 +15,20 @@ link: https://github.com/michelve/wordpress-mamp-localhost-generator
 
 1. MAMP if you don't have MAMP you can grab the latest version from: https://www.mamp.info/en/downloads/ (you don't need the PRO version)
 
+2. Use a text editor to open the main Apache configuration file, httpd.conf, which is located at Applications/MAMP/conf/apache/httpd.conf.
+
+Scroll to the bottom of the file and locate the following lines (around 524–525):
+
+# Virtual Hosts
+# Include /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf
+
+Remove the hash (pound) sign from the beginning of the line that begins with Include:
+
+# Virtual Hosts
+Include /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf
+
+Save the file, and then open the web app from you browser.
+
 
 ## How to use
 
