@@ -1,3 +1,7 @@
+<?php
+    if(!defined('WPINSTALL')) {die('Direct access not permitted'); }
+?>
+
 <style type="text/css">
     .step1 {
         display: none;
@@ -49,7 +53,7 @@
             </div>
 
             <div class="controls">                
-                <form id="getconfig" method="POST" name="getconfig" action="<?php echo $PHP_SELF;?>/?step=install">
+                <form id="getconfig" method="POST" name="getconfig" action="/?step=install">
                     <div class="col-sm-3">
                         <input id="edit" class="btn btn-default btn-lg" type="button" value="Edit" onclick="history.back();">
                     </div>

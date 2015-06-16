@@ -1,3 +1,7 @@
+<?php
+    if(!defined('WPINSTALL')) {die('Direct access not permitted'); }
+?>
+
 <style type="text/css">
     .step1, .step2 {
         display: none;
@@ -118,12 +122,12 @@
         $privatehostfile = '/private/etc/hosts';
 
         $VirtualHost = '<VirtualHost *:80> 
-            ServerAdmin admin@'.$sitename.'.com
-            DocumentRoot '.$path.'/'.$sitename.'.com'.'
-            ServerName '.$sitename.'.dev'.'
-            ErrorLog logs/'.$sitename.'.dev-error_log
-            CustomLog logs/'.$sitename.'.dev-access_log common
-        </VirtualHost>';
+    ServerAdmin admin@'.$sitename.'.com
+    DocumentRoot '.$path.'/'.$sitename.'.com'.'
+    ServerName '.$sitename.'.dev'.'
+    ErrorLog logs/'.$sitename.'.dev-error_log
+    CustomLog logs/'.$sitename.'.dev-access_log common
+</VirtualHost>';
 
         // line to add to hosts
         $localhost_site = '127.0.0.1  '.$sitename.'.dev';
@@ -219,7 +223,7 @@
         </script>';
 
 ?>
-<form method="POST" name="getconfig" action="<?php echo $PHP_SELF;?>/app.php?step=install">
+<form method="POST" name="getconfig" action="/?step=install">
     <div class="col-sm-3">
         <input id="edit" class="btn btn-default btn-lg" type="button" value="Edit" onclick="history.back();">
     </div>
