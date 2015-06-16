@@ -26,10 +26,15 @@ link: https://github.com/michelve/wordpress-mamp-localhost-generator
 
 `#Include /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf`
 
-5. **Remove the hash** (pound #) sign from the beginning of the line that begins with Include:
+4. **Remove the hash** (pound #) sign from the beginning of the line that begins with Include:
 
-6. **Save the file**, and then open the web app from you browser.
+`Virtual Hosts`
 
+`Include /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf`
+
+5. **Save the file**, and then open the web app from you browser.
+
+6. See the documentation.html for further help.
 
 
 ## How to use
