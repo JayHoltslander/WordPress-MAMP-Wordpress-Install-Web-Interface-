@@ -1,5 +1,3 @@
-<img src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/wpinstall.png" style="float:left; padding: 5px;" height="150"/>
-
 # WordPress MAMP Wordpress Install Web Interface
 Install the latest version of wordpress from your browser using localhost. This web app will guide you to get your local dev site up and running in matter of seconds. 
 
