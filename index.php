@@ -1,4 +1,10 @@
 <?php 
+// @Author: Michel Velis
+// @Repository: https://github.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-
+// @Version: 1.0.3
+// @Author URL: https://velismichel.com
+?>
+<?php 
 //error_reporting(0);
 // ob_start(); 
 // session_start(); 
@@ -122,7 +128,13 @@ if (isset($_POST['config'])) {
                 <!-- Username -->
                 <label class="control-label col-sm-4" for="host">Database Host</label>
                 <div class="controls col-sm-8">
-                  <input type="text" id="host" name="host" value="127.0.0.1:0000" class="form-control" data-toggle="tooltip" title="Enter your port #. Open MAMP > Preferences > Ports and see which port mysql is using" required>
+                  <select id="host" name="host">
+                    <option value="127.0.0.1:3306">127.0.0.1:3306</option>
+                    <option value="127.0.0.1:8889">127.0.0.1:8889</option>
+                    <option value="127.0.0.1">127.0.0.1</option>
+                    <option value="localhost">localhost</option>
+                  </select>
+                  <!-- <input type="text" id="host" name="host" value="127.0.0.1:0000" class="form-control" data-toggle="tooltip" title="Enter your port #. Open MAMP > Preferences > Ports and see which port mysql is using" required> -->
                   <p class="text-muted"><strong>Usually is:</strong> 3306 or 8889. Replace the zeros for the right port</p>
                 </div>
               </div>
@@ -173,6 +185,7 @@ if (isset($_POST['config'])) {
             <!-- Button -->
             <div class="controls">
               <button type="submit" name="config" class="btn btn-success btn-lg btn-block">Continue</button>
+              <br> <center><a href="documentation.html">Help and Documentation Guide</a></center>
             </div>
           </div>
           <div class="col-sm-4"></div>

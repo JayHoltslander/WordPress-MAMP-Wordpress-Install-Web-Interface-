@@ -118,11 +118,11 @@
         $privatehostfile = '/private/etc/hosts';
 
         $VirtualHost = '<VirtualHost *:80> 
-            ServerAdmin admin@creative.com
+            ServerAdmin admin@'.$sitename.'.com
             DocumentRoot '.$path.'/'.$sitename.'.com'.'
             ServerName '.$sitename.'.dev'.'
-            ErrorLog logs/creative.dev-error_log
-            CustomLog logs/creative.dev-access_log common
+            ErrorLog logs/'.$sitename.'.dev-error_log
+            CustomLog logs/'.$sitename.'.dev-access_log common
         </VirtualHost>';
 
         // line to add to hosts
