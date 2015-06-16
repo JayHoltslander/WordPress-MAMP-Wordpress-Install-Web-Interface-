@@ -116,6 +116,18 @@ select#host {
   padding: 20px 0 0 0;
   text-align: right;
 }
+.site-manager {
+	background: #22313F;
+	color: #EEEEEE;
+	padding: 5px 0;
+	text-align: right
+}
+.progress {
+	margin-top: 39px;
+}
+#sitemanager{
+	margin-top: 80px;
+}
 #wait {
   margin: 0 auto;
   position: absolute;

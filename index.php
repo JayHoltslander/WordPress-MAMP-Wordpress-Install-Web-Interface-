@@ -5,6 +5,7 @@
 // @Author URL: https://velismichel.com
 
 define('WPINSTALL', TRUE); 
+define('DOCUMENT_ROOT', dirname(__file__).'/');
 // ob_start(); 
 // session_start(); 
 
@@ -72,12 +73,46 @@ if (isset($_POST['config'])) {
 </html>
 
 <body>
-<div class="progress" style="border-radius: 0">
-      <div id="progress" class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">
-        20%
+  <div class="navbar-fixed-top site-manager">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8">
+          
+        </div>
+        <div class="col-sm-4">
+            <nav>
+              <a href="#manager" data-toggle="modal" data-target="#sitemanager"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Site Manager</a>
+            </nav>
+        </div>
       </div>
     </div>
-  <div class="container">
+  </div>
+<div class="progress navbar-fixed-top" style="border-radius: 0">
+    <div id="progress" class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">
+        20%
+    </div>
+</div>
+
+  <!-- div id="sitemanager">
+    <div class="body">
+          <?php
+              //var_dump($_SERVER);
+              echo exec('pwd');
+              $row = exec('cd '.DOCUMENT_ROOT.'; ls ',$output,$error);
+
+              if($error){
+                echo "Error : $error<br/>\n";
+              exit;
+              }
+              $output = preg_replace('/\b.com\b/', '.dev/', $output);
+              while(list(,$row) = each($output)){
+                echo '<li><i class="fa fa-home"></i> <a href="http://'.$row.'" target="_blank">'.$row.'</a> <br/> </li>';
+              }
+          ?>
+      </div>
+  </div -->
+
+  <div class="container main-wrapper">
     <div class="row">
     </div>
     <div class="clear"></div>
@@ -295,54 +330,7 @@ if (isset($_POST['config'])) {
     });
   </script>
 
-  <!-- Modal -->
-  <div class="modal fade" id="checkreqs" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="myModalLabel">Requirements Analyzer</h4>
-        </div>
-        <div class="modal-body">
-            <?php 
-              $mac_host_file = '/private/etc/hosts';
-
-              if (is_writable($mac_host_file)) {
-                  echo '<p class="bg-success"> <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Host File is writable  <br> <b>Location:</b> '.$mac_host_file.'</p>';
-              }
-              else {
-                  echo '<p class="bg-danger"> <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Host File is not writable. Please correct this, see the documentation. <br> <b>Location:</b> '.$mac_host_file.' </p>';
-              }
-            ?>
-
-            <?php 
-                $amp_host_file = '/Applications/MAMP/conf/apache/extra/httpd-vhosts.conf';
-
-                if (is_writable($amp_host_file)) {
-                    echo '<p class="bg-success"> <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> httpd-vhosts.conf is writable  <br> <b>Location:</b> '.$amp_host_file.'</p>';
-                }
-                else {
-                    echo '<p class="bg-danger"> <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> httpd-vhosts.conf is not writable. Please correct this, see the documentation. <br> <b>Location:</b> '.$amp_host_file.'</p>';
-                }
-            ?>
-            <?php  
-                $app_location = '/Applications/MAMP';  
-                
-                if (file_exists($app_location)) {  
-                    echo '<p class="bg-success"> <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> MAMP is installed </p>';  
-                } else {  
-                    // mkdir("folder/{$app_location}", 0777);  
-                    echo '<p class="bg-danger"> <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> MAMP is not Installed</p>';  
-                }  
-            ?> 
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
+  <?php include 'core/box.php' ?>
 
   <footer class="footer navbar-fixed-bottom">
     <div class="container">
