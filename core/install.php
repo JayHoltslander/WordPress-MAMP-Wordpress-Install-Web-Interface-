@@ -142,7 +142,7 @@
 
             // connect to database
             $username = $dbuser;
-            $password = $dbname;
+            $password = $dbpass;
             // $username = 'root';
             // $password = 'root';
 
