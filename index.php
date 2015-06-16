@@ -8,6 +8,7 @@ define('WPINSTALL', TRUE);
 // ob_start(); 
 // session_start(); 
 
+
 // Include MAMP Files
 if(file_exists('/Applications/MAMP/bin/mamp/php/functions.php')) {
   include_once '/Applications/MAMP/bin/mamp/php/functions.php';
