@@ -33,7 +33,7 @@ link: https://github.com/michelve/wordpress-mamp-localhost-generator
 	`Include /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf`
 
 5. **Save the file**, Restart MAMP, and then open the web app from you browser.
-	* Make sure to the web app is inside your localhost root foler
+	* Make sure to copy or clone the web app inside your localhost root folder
 
 6. See the documentation.html for further help.
 
