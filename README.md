@@ -22,17 +22,18 @@ link: https://github.com/michelve/wordpress-mamp-localhost-generator
 
 3. Scroll to the bottom of the file and locate the following lines (around 524–525):
 
-`Virtual Hosts`
+	`Virtual Hosts`
 
-`#Include /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf`
+	`#Include /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf`
 
 4. **Remove the hash** (pound #) sign from the beginning of the line that begins with Include:
 
-`Virtual Hosts`
+	`Virtual Hosts`
 
-`Include /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf`
+	`Include /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf`
 
-5. **Save the file**, and then open the web app from you browser.
+5. **Save the file**, Restart MAMP, and then open the web app from you browser.
+	* Make sure to the web app is inside your localhost root foler
 
 6. See the documentation.html for further help.
 
