@@ -2,14 +2,9 @@
     if(!defined('WPINSTALL')) {die('Direct access not permitted'); }
 ?>
 
-<style type="text/css">
-    .step1, .step2 {
-        display: none;
-    }
-</style>
+<style type="text/css"> .step1, .step2 {display: none; } </style> 
 
-<div class="row step3">
-<?php
+<div class="row step3"> <?php
     if (is_dir($sitename.'.com')) {
             rmdir($sitename.'.com');
     }
@@ -90,7 +85,7 @@
         }
 
         #edit config file
-        
+
         // copy config file for future use
         $setupfile = 'core/setup.php';
         $cloen_setupfile = $localhostpath.'/'.$sitename.'.com/'.'setup.php';

@@ -29,7 +29,6 @@ $site_path_var = $_SERVER["DOCUMENT_ROOT"];
 $file_location = $_SERVER['SCRIPT_FILENAME'];
 //echo $localhostpath;
 
-
 if (isset($_POST['config'])) {
 
     $protectsession = "<?php if(!defined('WPINSTALL')) {die('Direct access not permitted'); }?>"."\n";
@@ -59,7 +58,7 @@ if (isset($_POST['config'])) {
     fclose($config_file);
     //print_r(error_get_last());
     mkdir($_REQUEST['sitename'].'.com', 0755);
-    
+
     if (is_dir($_REQUEST['sitename'].'.com')) {
             rmdir($_REQUEST['sitename'].'.com');
     }
