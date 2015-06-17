@@ -12,6 +12,8 @@ Install the latest version of wordpress from your browser using localhost. This 
 	3. Create Database
 	4. Create wp-config.php file
 	5. Install Wordpress
+		* Create and Point Virtual Host ex: example.dev/
+		* Point your install to the virtual host
 	6. Site Manager - Manage all your sites in one place
 	8. App requirement check
 	9. That is it for now :)
@@ -64,12 +66,11 @@ see the documentation.html file for more detailed steps and guide
 
 
 ## Screen-shots
-
-<img src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/app.png"/>
+<img src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/sitemanager.png"/>
 
 <img src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/check.png"/>
 
-<img src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/sitemanager.png"/>
+<img src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/app.png"/>
 
 <img src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/confirm.png"/>
 
