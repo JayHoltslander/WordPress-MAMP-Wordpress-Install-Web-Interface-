@@ -16,11 +16,11 @@
 ?>
 
 <?php
-    if (is_dir($path.'/'.$sitename.'.com/') == true) {
+    if (is_dir($localhostpath.'/'.$sitename.'.com/') == true) {
         echo '<div class="alert alert-danger" role="alert">
               <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
               <span class="sr-only">Error:</span>
-              Folder '.$sitename.'.com exist
+              Site '.$sitename.'.com exist
             </div>';
         echo ' <style type="text/css">
           .step2 {
@@ -33,6 +33,7 @@
 
     }
     else  {
+        echo "<p class='bg-success'> <span class='glyphicon glyphicon-save'></span>  Installing Wordpress now ... </p>";
         echo '<script> 
         $("#progress").attr("aria-valuenow", "97");
             $("#progress").css( "width", "97%" );
@@ -73,7 +74,7 @@
               echo "<p class='bg-success'> <span class='glyphicon glyphicon-compressed'></span> GREAT: $wordpresszip extracted to $path </p>";
             }
             else {
-              echo "<p class='bg-danger'> <span class='glyphicon glyphicon-exclamation-sign'></span> FAILED: Couldn't open $wordpresszip or file does nto exist</p>";
+              echo "<p class='bg-danger'> <span class='glyphicon glyphicon-exclamation-sign'></span> FAILED: Couldn't open $wordpress zip or file does not exist</p>";
             }
         }
         $wp_config_sample = $path.'/'.$sitename.'.com/'.'wp-config-sample.php';
@@ -115,6 +116,15 @@
                 fputs($f,$line);
         }
         fclose($f);  
+
+        // copy config file for future use
+        $file = 'core/setup.php';
+        $newfile = $path.'/'.$sitename.'.com/'.'/setup.php';
+
+        if (!copy($file, $newfile)) {
+            echo "failed to copy setup $file ...\n";
+        }
+        //copy('core/setup.php', $path.'/'.$sitename.'.com/'.'/setup.php');
 
         #lets craete the host files for the site
         $httpd_vhostsfile = '/Applications/MAMP/conf/apache/extra/httpd-vhosts.conf';

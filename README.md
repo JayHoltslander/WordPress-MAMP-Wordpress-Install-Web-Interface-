@@ -14,6 +14,8 @@ link: https://github.com/michelve/wordpress-mamp-localhost-generator
 
 
 ## Requirements 
+see the documentation.html file for more detiled steps and guide 
+
 
 1. MAMP if you don't have MAMP you can grab the latest version from: 
 	* https://www.mamp.info/en/downloads/ (you don't need the PRO version)
@@ -47,10 +49,17 @@ link: https://github.com/michelve/wordpress-mamp-localhost-generator
 4. After the install is completed it will prompt you to re-start mamp - after you can continue with the installation
 5. please note this in early stages if you have any issues please let me know
 
+
 ## Screenshots
 
-<img src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/screenshot1.png"/>
+<img src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/app.png"/>
 
-<img src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/screenshot2.png"/>
+<img src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/check.png"/>
+
+<img src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/sitemanager.png"/>
+
+<img src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/confirm.png"/>
 
 <img src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/screenshot3.png"/>
+
+<img src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/doc.png"/>

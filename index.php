@@ -9,6 +9,8 @@ define('DOCUMENT_ROOT', dirname(__file__).'/');
 // ob_start(); 
 // session_start(); 
 
+// Report runtime errors
+error_reporting(E_ERROR | E_PARSE);
 
 // Include MAMP Files
 if(file_exists('/Applications/MAMP/bin/mamp/php/functions.php')) {
@@ -21,6 +23,10 @@ if(file_exists('/Applications/MAMP/bin/phpMyAdmin/config.inc.php')) {
 $nullpath = '';
 $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 $localhostpath = pathinfo(realpath($nullpath), PATHINFO_DIRNAME);
+
+
+$site_path_var = $_SERVER["DOCUMENT_ROOT"];
+$file_location = $_SERVER['SCRIPT_FILENAME'];
 //echo $localhostpath;
 
 
@@ -81,7 +87,7 @@ if (isset($_POST['config'])) {
         </div>
         <div class="col-sm-4">
             <nav>
-              <a href="#manager" data-toggle="modal" data-target="#sitemanager"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Site Manager</a>
+              <a id="manager" href="#manager"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Site Manager</a>
             </nav>
         </div>
       </div>
@@ -93,12 +99,12 @@ if (isset($_POST['config'])) {
     </div>
 </div>
 
-  <!-- div id="sitemanager">
+  <div id="sitemanager" class="showsites" style="display:none">
     <div class="body">
-          <?php
+      <?php
               //var_dump($_SERVER);
-              echo exec('pwd');
-              $row = exec('cd '.DOCUMENT_ROOT.'; ls ',$output,$error);
+              //echo exec('pwd');
+              $row = exec('cd '.$localhostpath.'; ls ',$output,$error);
 
               if($error){
                 echo "Error : $error<br/>\n";
@@ -106,11 +112,29 @@ if (isset($_POST['config'])) {
               }
               $output = preg_replace('/\b.com\b/', '.dev/', $output);
               while(list(,$row) = each($output)){
-                echo '<li><i class="fa fa-home"></i> <a href="http://'.$row.'" target="_blank">'.$row.'</a> <br/> </li>';
+                echo '<div class="clear"></div>
+                <div class="col-sm-12">
+                        <div class="col-sm-6">
+                          <span class="glyphicon glyphicon-home" aria-hidden="true"></span>  
+                          <a href="http://'.$row.'" target="_blank"> '.$row.'</a> 
+                        </div>
+                        <div class="col-sm-2 btn btn-info white">
+                            <a target="_blank" href="http://'.$row.'">View Site</a>
+                        </div>
+                        <div class="col-sm-2 btn btn-primary white">
+                            <a target="_blank" href="http://'.$row.'wp-admin/">wp-admin</a>
+                        </div>
+                        <div class="col-sm-2 btn btn-default dark">
+                            <a target="_blank" href="http://localhost/phpMyAdmin/">phpMyAdmin</a>
+                        </div>
+
+                      </div>
+                      <div class="clear"></div>
+                      ';
               }
           ?>
       </div>
-  </div -->
+  </div>
 
   <div class="container main-wrapper">
     <div class="row">
@@ -324,6 +348,11 @@ if (isset($_POST['config'])) {
     }
 
   ?>
+  <script>
+    $( "#manager" ).click(function() {
+      $('.showsites').toggleClass( "show" );
+    });
+  </script>
   <script>
     $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip(); 
