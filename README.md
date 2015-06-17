@@ -1,10 +1,10 @@
 
 # WordPress MAMP Wordpress Install Web Interface
-	Install the latest version of wordpress from your browser using localhost. This web app will guide you to get your local dev site up and running in matter of seconds. 
+Install the latest version of wordpress from your browser using localhost. This web app will guide you to get your local dev site up and running in matter of seconds. 
 
 
 ###### Command Line Version
-	* Repo Link: https://github.com/michelve/wordpress-mamp-localhost-generator
+* Repo Link: https://github.com/michelve/wordpress-mamp-localhost-generator
 
 ## Features
 	1. Get Latest version of wordpress
@@ -46,11 +46,11 @@ see the documentation.html file for more detailed steps and guide
 
 
 ## Coming Soon
-	* Wordpress Structure rewrite (Better security)
-		* Change wp-content folder name
-		* Change wp-uploads dir name
-		* Change plugins dir name
-	* More secure .htaccess
+* Wordpress Structure rewrite (Better security)
+	* Change wp-content folder name
+	* Change wp-uploads dir name
+	* Change plugins dir name
+* More secure .htaccess
 
 
 ## How to use
