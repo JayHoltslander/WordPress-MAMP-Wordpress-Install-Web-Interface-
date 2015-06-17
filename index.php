@@ -57,8 +57,13 @@ if (isset($_POST['config'])) {
     fwrite($config_file,$php_ends."\n");
 
     fclose($config_file);
-    print_r(error_get_last());
+    //print_r(error_get_last());
     mkdir($_REQUEST['sitename'].'.com', 0755);
+    
+    if (is_dir($_REQUEST['sitename'].'.com')) {
+            rmdir($_REQUEST['sitename'].'.com');
+    }
+
 
     if (empty($_POST['localhostdir']) || empty($_POST['sitename']) || empty($_POST['dbname']) || empty($_POST['dbuser']) || empty($_POST['host']) || empty($_POST['dbpass']))  {
         print ("please enter the required values");

@@ -90,6 +90,14 @@
         }
 
         #edit config file
+        
+        // copy config file for future use
+        $setupfile = 'core/setup.php';
+        $cloen_setupfile = $localhostpath.'/'.$sitename.'.com/'.'setup.php';
+
+        if (!copy($setupfile, $cloen_setupfile)) {
+            echo "failed to copy setup $setupfile ...\n";
+        }
 
         //read the entire string
         $str=implode("",file($path.'/'.$sitename.'.com/'.'wp-config.php'));
@@ -117,13 +125,6 @@
         }
         fclose($f);  
 
-        // copy config file for future use
-        $file = 'core/setup.php';
-        $newfile = $path.'/'.$sitename.'.com/'.'/setup.php';
-
-        if (!copy($file, $newfile)) {
-            echo "failed to copy setup $file ...\n";
-        }
         //copy('core/setup.php', $path.'/'.$sitename.'.com/'.'/setup.php');
 
         #lets craete the host files for the site
