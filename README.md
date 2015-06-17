@@ -16,7 +16,7 @@ Install the latest version of wordpress from your browser using localhost. This 
 		* Point your install to the virtual host
 	6. Site Manager - Manage all your sites in one place
 	8. App requirement check
-	9. That is it for now :)
+	9. That is it for now
 
 
 ## Requirements 
