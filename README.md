@@ -17,6 +17,11 @@ Install the latest version of wordpress from your browser using localhost. This 
 	6. Site Manager - Manage all your sites in one place
 	8. App requirement check
 	9. That is it for now
+	10. Wordpress Structure rewrite (Better security)
+		* Change wp-content folder name
+		* Change wp-uploads dir name
+		* Change plugins dir name
+		* More secure .htaccess (coming soon)
 
 
 ## Requirements 
@@ -46,13 +51,6 @@ see the documentation.html file for more detailed steps and guide
 
 	6. See the documentation.html for further help.
 
-
-## Coming Soon
-* Wordpress Structure rewrite (Better security)
-	* Change wp-content folder name
-	* Change wp-uploads dir name
-	* Change plugins dir name
-* More secure .htaccess
 
 
 ## How to use

@@ -67,11 +67,13 @@
               unlink('latest.zip');
               sleep(1);
               echo "<p class='bg-success'> <span class='glyphicon glyphicon-compressed'></span> GREAT: $wordpresszip extracted to $path </p>";
+              mkdir($path.'/'.$sitename.'.com/wp-content/uploads', 0755);
             }
             else {
               echo "<p class='bg-danger'> <span class='glyphicon glyphicon-exclamation-sign'></span> FAILED: Couldn't open $wordpress zip or file does not exist</p>";
             }
         }
+        //create uploads fodle
         $wp_config_sample = $path.'/'.$sitename.'.com/'.'wp-config-sample.php';
         $wp_config = $path.'/'.$sitename.'.com/'.'wp-config.php';
 
@@ -237,4 +239,4 @@
         <a href="http://<?php echo $sitename.'.dev/'; ?>" id="openwp" type="submit" name="openwp" class="btn btn-danger btn-lg">Open > <?php echo $sitename.'.dev'; ?></a>
     </div>
 </form>
-</div>
+</div> 

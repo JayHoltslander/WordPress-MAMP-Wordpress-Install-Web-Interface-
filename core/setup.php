@@ -2,8 +2,8 @@
 
 <?php 
   $localhostdir = "/Users/mvelis/Sites/WPSites/";
-  $sitename     = "weds";
-  $dbname       = "sdf";
+  $sitename     = "demca";
+  $dbname       = "dear";
   $dbuser       = "root";
   $dbprefix     = "Wpr_";
   $host         = "127.0.0.1:3306";

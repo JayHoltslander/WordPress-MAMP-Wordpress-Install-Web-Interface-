@@ -75,6 +75,20 @@ select#host {
   border-radius: 6px;
   box-shadow: none;
   width: 100%;
+  background: white;
+}
+select#sitemanager {
+  height: 42px;
+  padding: 8px 12px;
+  font-family: Lato,Helvetica,Arial,sans-serif;
+  font-size: 15px;
+  line-height: 1.467;
+  color: #34495e;
+  border: 2px solid #bdc3c7;
+  border-radius: 6px;
+  box-shadow: none;
+  width: 100%;
+  margin: 0;
 }
 .installinfo {
   padding: 19px 35px;
@@ -104,8 +118,33 @@ select#host {
 .col-sm-5.wpinstall {
 	text-align: center;
 }
+.home-link {
+	text-align: left;
+}
+.site-manager span {
+	color: #6db4a6
+}
+.site-manager a {
+	margin-right: 15px;
+	font-size: 14px;
+}
+.site-manager a:hover {
+	color: #fff;
+} 
+.config-output {
+  font-size: 11px;
+  padding: 11px 18px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  color: #d9534f;
+  background-color: #eee;
+}
 #getconfig, #edit, #openwp {
 	margin-top: 35px;
+}
+.get-config h6 {
+	font-size: 17px;
+	color: #5cb85c;
 }
 .white a {
 	color: white;
@@ -128,9 +167,29 @@ select#host {
   margin-top: 90px;
   opacity: 0.5;
 }
+#wpcontent .form-control {
+	width: 96%;
+}
+#wpcontent .form-group p {
+	font-size: 12px;
+	padding: 3px 0 0 5px;
+	margin: 0;
+}
+#wpcontent .form-group hr {
+	border-top: 1px solid #ddd;
+}
+#wpcontent .form-group {
+	margin-bottom: 0;
+}
+form.form-horizontal.col-sm-12.wp {
+  margin: 0;
+ }
 .check-req {
   padding: 20px 0 0 0;
   text-align: right;
+}
+.wpmanager {
+	margin-top: 80px;
 }
 .site-manager {
 	background: #22313F;
@@ -138,34 +197,52 @@ select#host {
 	padding: 5px 0;
 	text-align: right
 }
+.verify-title {
+	font-size: 17px;
+	font-weight: 600;
+	padding: 4px 0;
+	margin: 15px 0 0 0;
+}
 .progress {
-	margin-top: 39px;
+	margin-top: 33px;
+}
+.confirm {
+	font-size: 13px;
+	font-weight: 400;
+}
+.rename-step2 {
+	padding: 15px 0 0 0;
+}
+.get-config .bg-info, .get-config .bg-danger, .get-config .bg-success {
+  font-size: 13px;
+  padding: 5px 13px;
+  margin: 2px 0;
 }
 #sitemanager{
 	margin-top: 80px;
 }
 #wait {
-  margin: 0 auto;
-  position: absolute;
-  top: 5%;
-  right: 0;
-  max-width: 400px;
-  text-align: center;
-  padding: 80px;
-  border: 1px solid #e5e5e5;
-  background: white;
-  color: #111;
-  opacity: 0.95;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
+	margin: 0 auto;
+	position: absolute;
+	top: 5%;
+	right: 0;
+	max-width: 400px;
+	text-align: center;
+	padding: 80px;
+	border: 1px solid #e5e5e5;
+	background: white;
+	color: #111;
+	opacity: 0.95;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
 }
 
 /*site manager*/
 form.form-horizontal.col-sm-12 {
-  margin-top: 65px;
+	margin-top: 65px;
 }
 #sitemanager {
 	background: #ecf0f1;
@@ -191,4 +268,8 @@ form.form-horizontal.col-sm-12 {
 	list-style-type: none;
 	border-bottom: 1px solid #ddd;
 	padding: 8px 0;
+}
+.wp-manage h2 {
+	padding: 0;
+	margin: 0;
 }
