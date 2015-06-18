@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Wordpress mamp install - web interface by michelve</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Wordpress mamp install - web interface</h1>
+      <h2 class="project-tagline">Install the latest version of wordpress from your browser using localhost. This web app will guide you to get your local dev site up and running in matter of seconds. </h2>
+      <a href="https://github.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-" class="btn">View on GitHub</a>
+      <a href="https://github.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="wordpress-mamp-wordpress-install-web-interface" class="anchor" href="#wordpress-mamp-wordpress-install-web-interface" aria-hidden="true"><span class="octicon octicon-link"></span></a>WordPress MAMP Wordpress Install Web Interface</h1>
+
+<p>Install the latest version of wordpress from your browser using localhost. This web app will guide you to get your local dev site up and running in matter of seconds. </p>
+
+<h6>
+<a id="command-line-version" class="anchor" href="#command-line-version" aria-hidden="true"><span class="octicon octicon-link"></span></a>Command Line Version</h6>
+
+<ul>
+<li>Repo Link: <a href="https://github.com/michelve/wordpress-mamp-localhost-generator">https://github.com/michelve/wordpress-mamp-localhost-generator</a>
+</li>
+</ul>
+
+<h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2>
+
+<pre><code>1. Get Latest version of wordpress
+2. Setup Wordpress
+3. Create Database
+4. Create wp-config.php file
+5. Install Wordpress
+    * Create and Point Virtual Host ex: example.dev/
+    * Point your install to the virtual host
+6. Site Manager - Manage all your sites in one place
+8. App requirement check
+9. That is it for now
+10. Wordpress Structure rewrite (Better security)
+    * Change wp-content folder name
+    * Change wp-uploads dir name
+    * Change plugins dir name
+    * More secure .htaccess (coming soon)
+</code></pre>
+
+<h2>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h2>
+
+<p>see the documentation.html file for more detailed steps and guide </p>
+
+<pre><code>1. MAMP if you don't have MAMP you can grab the latest version from: 
+    * https://www.mamp.info/en/downloads/ (you don't need the PRO version)
+
+2. Use a text editor to open the main Apache configuration file, httpd.conf, which is located at
+    * **Applications/MAMP/conf/apache/httpd.conf**
+
+3. Scroll to the bottom of the file and locate the following lines (around 524–525):
+
+    `Virtual Hosts`
+
+    `#Include /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf`
+
+4. **Remove the hash** (pound #) sign from the beginning of the line that begins with Include:
+
+    `Virtual Hosts`
+
+    `Include /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf`
+
+5. **Save the file**, Restart MAMP, and then open the web app from you browser.
+    * Make sure to copy or clone the web app inside your localhost root folder
+
+6. See the documentation.html for further help.
+</code></pre>
+
+<h2>
+<a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to use</h2>
+
+<pre><code>* use the documentation.html file 
+
+1. Move the web app into the localhost folder 
+2. Access the localhost from your favorite web browser and access the folder you just copied
+3. Follow the installation instructions and fill all the required information
+4. After the install is completed it will prompt you to re-start MAMP - after you can continue with the installation
+5. please note this in early stages if you have any issues please let me know
+</code></pre>
+
+<h2>
+<a id="screen-shots" class="anchor" href="#screen-shots" aria-hidden="true"><span class="octicon octicon-link"></span></a>Screen-shots</h2>
+
+<p><img src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/sitemanager.png"></p>
+
+<p><img src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/check.png"></p>
+
+<p><img src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/app.png"></p>
+
+<p><img src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/confirm.png"></p>
+
+<p><img src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/done.png"></p>
+
+<p><img src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/doc.png"></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-">Wordpress mamp install - web interface</a> is maintained by <a href="https://github.com/michelve">michelve</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
+
