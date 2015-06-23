@@ -1,9 +1,11 @@
+<?php if(!defined('WPINSTALL')) {die('Direct access not permitted'); }?>
+
 <div class="row step1">
       <div class="clear"></div>
 
       <div class="error" style="display:none"></div>
 
-      <form class="form-horizontal col-sm-12" action="/?step=verify" method="POST" name="config">
+      <form class="form-horizontal col-sm-12" action="<?php echo 'http://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'] ?>?step=verify" method="POST" name="config">
         <fieldset>
          <div class="col-sm-6 dbinfo">
                <div class="col-sm-12">
@@ -14,7 +16,7 @@
                   <a href="#req" data-toggle="modal" data-target="#checkreqs"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Check App   </a>
                 </div>
                 <div class="clear"></div>
-                <p class="info">Welcome to the famous two-minutes WordPress installation process! Just fill in the information below and you’ll be on your way to using the most extendable and powerful personal publishing platform in the world.</p>
+                <!-- <p class="info">Welcome to the famous two-minutes WordPress installation process! Just fill in the information below and you’ll be on your way to using the most extendable and powerful personal publishing platform in the world.</p> -->
                </div>
                <!-- <div class="col-sm-9">
                 <h4>Site Info</h4>

@@ -22,7 +22,11 @@ if(file_exists('/Applications/MAMP/bin/phpMyAdmin/config.inc.php')) {
   
 $nullpath = '';
 $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-$localhostpath = pathinfo(realpath($nullpath), PATHINFO_DIRNAME);
+//$localhostpath = pathinfo(realpath($nullpath), PATHINFO_DIRNAME);
+$result = exec('grep -r ^DocumentRoot /Applications/MAMP/conf/apache/httpd.conf');
+$result = substr($result, stripos($result, 'DocumentRoot'));
+$localhostpath = trim(str_replace(array('DocumentRoot', '"'), '', $result));
+//echo $localhostpath;
 
 
 $site_path_var = $_SERVER["DOCUMENT_ROOT"];
@@ -124,7 +128,7 @@ if (isset($_POST['config'])) {
     <div class="row">
     </div>
     <div class="clear"></div>
-    
+
 
     <?php 
       include 'core/setup.php';

@@ -4,7 +4,8 @@
 
 <style type="text/css"> .step1, .step2 {display: none; } </style> 
 
-<div class="row step3"> <?php
+<div class="row step3"> 
+<?php
     if (is_dir($sitename.'.com')) {
             rmdir($sitename.'.com');
     }
@@ -231,7 +232,7 @@
         </script>';
 
 ?>
-<form method="POST" name="getconfig" action="/?step=install">
+<form method="POST" name="getconfig" action="<?php echo 'http://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'] ?>?step=install">
     <div class="col-sm-3">
         <input id="edit" class="btn btn-default btn-lg" type="button" value="Edit" onclick="history.back();">
     </div>
