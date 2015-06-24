@@ -5,15 +5,16 @@
 
       <div class="error" style="display:none"></div>
 
-      <form class="form-horizontal col-sm-12" action="<?php echo 'http://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'] ?>?step=verify" method="POST" name="config">
+      <form id="wpinfo" class="form-horizontal col-sm-12" action="<?php echo 'http://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'] ?>?step=verify" method="POST" name="config">
+        <div class="row">
         <fieldset>
          <div class="col-sm-6 dbinfo">
                <div class="col-sm-12">
-                <div class="col-sm-6">
-                  <img src="core/images/mamp-logo.png" style="max-width: 245px;">
+                <div class="col-xs-6">
+                  <img class="img-responsive" src="core/images/mamp-logo.png" style="max-width: 245px;">
                 </div>
-                <div class="col-sm-6 check-req">                  
-                  <a href="#req" data-toggle="modal" data-target="#checkreqs"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Check App   </a>
+                <div class="col-xs-6 check-req">                  
+                  <a href="#req" data-toggle="modal" data-target="#checkreqs"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Check App  </a>
                 </div>
                 <div class="clear"></div>
                 <!-- <p class="info">Welcome to the famous two-minutes WordPress installation process! Just fill in the information below and you’ll be on your way to using the most extendable and powerful personal publishing platform in the world.</p> -->
@@ -28,7 +29,7 @@
                 <!-- Username -->
                 <label class="col-sm-4 control-label" for="localhostdir">Localhost Dir Path</label>
                 <div class="controls col-sm-8">
-                  <input type="text" id="localhostdir" name="localhostdir" placeholder="the absolute path to your localhost" value="<?php echo $localhostpath.'/';?>" class="form-control" required>
+                  <input type="text" id="localhostdir" name="localhostdir" placeholder="the absolute path to your localhost" value="<?php echo $localhostpath.'/';?>" class="form-control" data-toggle="tooltip" title="This is where all your local files/sites are">
                   <p class="text-muted">by default we will try to get the path from your localhost if you path is diff corrected it now</p>
                 </div>
               </div>
@@ -38,7 +39,7 @@
                 <!-- Username -->
                 <label class="control-label col-sm-4" for="sitename">Site Name</label>
                 <div class="controls col-sm-8">
-                  <input type="text" id="sitename" name="sitename" placeholder="mysitename" class="form-control" required>
+                  <input type="text" id="sitename" name="sitename" placeholder="mysitename" class="form-control">
                   <p class="text-muted">do not add .com or .dev It will be added automatically</p>
                 </div>
               </div>
@@ -108,7 +109,7 @@
                 <!-- Username -->
                 <label class="control-label col-sm-4" for="dbprefix">Database Prefix</label>
                 <div class="controls col-sm-8">
-                  <input type="text" id="dbprefix" name="dbprefix" value="Wpr_" class="form-control" required>
+                  <input type="text" id="dbprefix" name="dbprefix" value="PrX_" class="form-control" data-toggle="tooltip" title="It is recommended to change your default wp_ database prefix for security reasons" required>
                 </div>
               </div>
           </div>
@@ -118,12 +119,13 @@
           <div class="control-group col-sm-4 top">
             <!-- Button -->
             <div class="controls">
-              <button type="submit" name="config" class="btn btn-success btn-lg btn-block">Continue</button>
+              <button type="submit" name="config" class="btn btn-success btn-lg btn-block"> Continue <i class="fa fa-angle-double-right"></i> </button>
               <br> <center><a href="documentation.html">Help and Documentation Guide</a></center>
             </div>
           </div>
           <div class="col-sm-4"></div>
         </fieldset>
+      </div>
       </form>
 
 

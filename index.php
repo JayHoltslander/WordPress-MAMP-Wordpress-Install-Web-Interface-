@@ -4,6 +4,11 @@
 // @Version: 1.0.4
 // @Author URL: https://velismichel.com
 
+header( 'HTTP/1.1 200 OK' );
+header('Cache-Control: no-cache, no-store, must-revalidate'); // HTTP 1.1.
+header('Pragma: no-cache'); // HTTP 1.0.
+header('Expires: 0'); // Proxies.
+
 define('WPINSTALL', TRUE); 
 define('DOCUMENT_ROOT', dirname(__file__).'/');
 // ob_start(); 
@@ -23,6 +28,7 @@ if(file_exists('/Applications/MAMP/bin/phpMyAdmin/config.inc.php')) {
 $nullpath = '';
 $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 //$localhostpath = pathinfo(realpath($nullpath), PATHINFO_DIRNAME);
+
 $result = exec('grep -r ^DocumentRoot /Applications/MAMP/conf/apache/httpd.conf');
 $result = substr($result, stripos($result, 'DocumentRoot'));
 $localhostpath = trim(str_replace(array('DocumentRoot', '"'), '', $result));
@@ -79,6 +85,7 @@ if (isset($_POST['config'])) {
     <title>WordPress MAMP Generator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="core/css/app.css">
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
@@ -163,14 +170,17 @@ if (isset($_POST['config'])) {
   ?>
   
   <?php include 'core/box.php' ?>
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
   <script type="text/javascript" src="core/js/app.js"></script>
+
+
 
   <footer class="footer navbar-fixed-bottom">
     <div class="container">
 
       
       <div class="col-sm-6 author">
-        <p><a href="https://github.com/michelve/wordpress-mamp-localhost-generator" target="_blank">GitHub Project</a>
+        <p><i class="fa fa-github-square"></i> <a href="https://github.com/michelve/wordpress-mamp-localhost-generator" target="_blank">GitHub Project</a>
           <br> Author: <a href="http://velismichel.com/" target="_blank">Michel Velis</a></p>
       </div>
 

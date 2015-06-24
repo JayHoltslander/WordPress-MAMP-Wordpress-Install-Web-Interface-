@@ -7,6 +7,32 @@ $('#sitename').bind('keypress', function (event) {
     }
 });
 
+// When the browser is ready...
+$(function() {  
+	// Setup form validation on the #register-form element
+	$("#wpinfo").validate({
+
+	    // Specify the validation rules
+	    rules: {
+	        localhostdir: "required",
+	        sitename: "required",
+	        dbname: "dbname"
+	    },
+	    
+	    // Specify the validation error messages
+	    messages: {
+	        localhostdir: "Please enter the correct path to your localhost directory",
+	        sitename: "Please enter the site name",
+	        dbname: "Specify a database name"
+	    },
+	    
+	    submitHandler: function(form) {
+	        form.submit();
+	    }
+	});
+
+});
+
 
 //progress
 $(document).ready(function(){

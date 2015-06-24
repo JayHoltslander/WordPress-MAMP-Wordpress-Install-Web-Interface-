@@ -34,11 +34,40 @@ footer p {
 .or-dvivider {
 	width: 45px
 }
+.error {
+	border-color: #e74c3c;
+	box-shadow: none;
+}
+label.error{
+	font-size: 14px;
+	font-weight: 400;
+	padding: 0;
+	color: #e74c3c;
+}
 .text-muted {
 	font-size: 11px;
 	line-height: 12px;
 	font-family: arial;
 	padding: 2px 0;
+}
+.modal-dialog {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  right: 0;
+  top: -30px;
+  bottom: 0;
+  width: 100%;
+  border-radius: 0;
+  overflow: hidden;
+}
+.modal-content {
+	height: 100%;
+}
+.modal-footer {
+  position: absolute;
+  bottom: 100px;
+  width: 100%;
 }
 .dobate {
 	text-align: right;
