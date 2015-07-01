@@ -23,6 +23,8 @@ Install the latest version of wordpress from your browser using localhost. This 
 		* Change plugins dir name
 		* More secure .htaccess (coming soon)
 
+## Videos and Demos 
+
 [![Application Site Manager Demo](https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/video-sitemanager.png)](https://www.youtube.com/watch?v=VENQ6TzOGQU "Application Site Manager Demo")
 
 [![Application Preview and Demo](https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/preview.png)](https://youtu.be/StTqXEQ2l-Y?t=35s "Application Preview and Demo")
