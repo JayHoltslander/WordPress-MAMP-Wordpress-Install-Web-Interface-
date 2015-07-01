@@ -27,7 +27,7 @@ Install the latest version of wordpress from your browser using localhost. This 
 
 [![Application Site Manager Demo](https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/video-sitemanager.png)](https://www.youtube.com/watch?v=VENQ6TzOGQU "Application Site Manager Demo")
 
-[![Application Preview and Demo](https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/preview.png)](https://youtu.be/StTqXEQ2l-Y?t=35s "Application Preview and Demo")
+[![Application Preview and Demo](https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/preview.png)](https://www.youtube.com/watch?v=VD76l3K2P2o "Application Preview and Demo")
 
 
 ## Requirements 
