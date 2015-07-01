@@ -23,6 +23,10 @@ Install the latest version of wordpress from your browser using localhost. This 
 		* Change plugins dir name
 		* More secure .htaccess (coming soon)
 
+[![Application Site Manager Demo](https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/video-sitemanager.png)](https://www.youtube.com/watch?v=VENQ6TzOGQU "Application Site Manager Demo")
+
+[![Application Preview and Demo](https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/preview.png)](https://youtu.be/StTqXEQ2l-Y?t=35s "Application Preview and Demo")
+
 
 ## Requirements 
 see the documentation.html file for more detailed steps and guide 
@@ -30,6 +34,7 @@ see the documentation.html file for more detailed steps and guide
 
 	1. MAMP if you don't have MAMP you can grab the latest version from: 
 		* https://www.mamp.info/en/downloads/ (you don't need the PRO version)
+		* MAC OS X
 
 	2. Use a text editor to open the main Apache configuration file, httpd.conf, which is located at
 		* **Applications/MAMP/conf/apache/httpd.conf**
