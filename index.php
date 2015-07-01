@@ -1,13 +1,9 @@
 <?php 
 // @Author: Michel Velis
 // @Repository: https://github.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-
-// @Version: 1.0.4
+// @Version: 1.0.5
 // @Author URL: https://velismichel.com
 
-header( 'HTTP/1.1 200 OK' );
-header('Cache-Control: no-cache, no-store, must-revalidate'); // HTTP 1.1.
-header('Pragma: no-cache'); // HTTP 1.0.
-header('Expires: 0'); // Proxies.
 
 define('WPINSTALL', TRUE); 
 define('DOCUMENT_ROOT', dirname(__file__).'/');
@@ -186,7 +182,7 @@ if (isset($_POST['config'])) {
   <footer class="footer navbar-fixed-bottom">
     <div class="container">
       <div class="col-sm-6 author">
-        <p><i class="fa fa-github-square"></i> <a href="https://github.com/michelve/wordpress-mamp-localhost-generator" target="_blank">GitHub Project</a>
+        <p><i class="fa fa-github-square"></i> <a href="https://github.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-" target="_blank">GitHub Project</a>
           <br> Author: <a href="http://velismichel.com/" target="_blank">Michel Velis</a></p>
       </div>
 
