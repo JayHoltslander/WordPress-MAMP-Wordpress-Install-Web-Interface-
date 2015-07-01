@@ -2,8 +2,8 @@
 
 <?php 
   $localhostdir = "/Users/mvelis/Sites/WPSites/";
-  $sitename     = "";
-  $dbname       = "hh";
+  $sitename     = "dashdkl";
+  $dbname       = "sadas";
   $dbuser       = "root";
   $dbprefix     = "PrX_";
   $host         = "127.0.0.1:3306";

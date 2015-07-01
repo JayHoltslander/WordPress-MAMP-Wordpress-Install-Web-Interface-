@@ -6,7 +6,7 @@
 
 <div class="row step2">
     <div class="downlaod">
-        <div class="col-sm-7">
+        <div class="col-sm-7 verify-panel">
             <!-- <h2 class=""><span class="glyphicon glyphicon-wrench"></span> Lets Install Wordpress Now</h2> -->
             <h4><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
             <strong> Confirm:</strong>  Your Wordpress Install Info</h4>
@@ -45,9 +45,8 @@
                      </tr>
                 </table>
             </div>
-            <div id="wait" style="display:none;">
-                <img src="core/images/wait.gif" alt="please wait" />
-            </div>
+            <div class="clear"></div>
+
 
             <div class="controls">                
                 <form id="getconfig" method="POST" name="getconfig" action="/?step=install">
@@ -58,14 +57,8 @@
                         <input id="getconfig" type="submit" value="Download and Install Worpress" name="getconfig" class="btn btn-danger btn-lg"/>
                     </div>
                 </form>
-                <script type="text/javascript">
-                $( "#getconfig" ).submit(function() {
-                    $("#wait").show();
-                  // alert( "Handler for .submit() called." );
-                  // event.preventDefault();
-                });
-                </script>
             </div>
+            <div class="clear"></div>
         </div>
         <div class="col-sm-5 wpinstall hidden-xs">
             <img src="core/images/wpinstall.png">

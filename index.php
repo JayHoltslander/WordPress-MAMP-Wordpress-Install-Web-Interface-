@@ -86,6 +86,7 @@ if (isset($_POST['config'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="core/css/animate.css">
     <link rel="stylesheet" type="text/css" href="core/css/app.css">
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
@@ -93,7 +94,7 @@ if (isset($_POST['config'])) {
 
 </html>
 
-<body>
+<body class="<?php echo $_GET['step']; ?>">
 <?php include 'core/views/nav.php'; ?>
 
   <div id="sitemanager" class="showsites" style="display:none">
@@ -130,6 +131,8 @@ if (isset($_POST['config'])) {
       ?>
     </div>
   </div>
+  
+  <?php include 'core/box.php' ?>
 
   <div class="container main-wrapper">
     <div class="row">
@@ -143,7 +146,13 @@ if (isset($_POST['config'])) {
         include 'core/verify.php';
       } 
       elseif (strpos($url,'?step=install') !== false){
-        include 'core/install.php';          
+        echo '<div id="loader-box"> 
+            <div class="loader"></div>
+        </div>';
+        sleep(3);
+        include 'core/install.php'; 
+        sleep(1);
+        echo '<script> $(window).load(function() {$("#loader-box").fadeOut("slow"); }) </script>'.'<style> body.install {background: none}</style>'; 
       }
       else {
         include 'core/init.php';
@@ -169,16 +178,13 @@ if (isset($_POST['config'])) {
     }
   ?>
   
-  <?php include 'core/box.php' ?>
+
   <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
   <script type="text/javascript" src="core/js/app.js"></script>
 
 
-
   <footer class="footer navbar-fixed-bottom">
     <div class="container">
-
-      
       <div class="col-sm-6 author">
         <p><i class="fa fa-github-square"></i> <a href="https://github.com/michelve/wordpress-mamp-localhost-generator" target="_blank">GitHub Project</a>
           <br> Author: <a href="http://velismichel.com/" target="_blank">Michel Velis</a></p>
@@ -195,6 +201,5 @@ if (isset($_POST['config'])) {
 
     </div>
   </footer>
-
 </body>
 </html> 

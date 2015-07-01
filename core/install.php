@@ -4,7 +4,29 @@
 
 <style type="text/css"> .step1, .step2 {display: none; } </style> 
 
-<div class="row step3"> 
+<div class="modal fade" id="mamp-restart" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div class="infobox">
+            i
+        </div>
+        <h4 class="modal-title" id="myModalLabel">
+        Re-Start MAMP
+        </h4>
+      </div>
+      <div class="modal-body">
+        Please re-start MAMP to continue with the installation, Once you have done that close this box.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info" data-dismiss="modal">Done, I Have Restarted It.</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row step3 install-output"> 
 <?php
     if (is_dir($sitename.'.com')) {
             rmdir($sitename.'.com');
@@ -13,6 +35,7 @@
 
 <?php
     if (is_dir($localhostpath.'/'.$sitename.'.com/') == true) {
+        $class = 'hide';
         echo '<div class="alert alert-danger" role="alert">
               <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
               <span class="sr-only">Error:</span>
@@ -22,13 +45,15 @@
           .step2 {
             display: block;
           }
-          .step1 {
+          .step1. .col-sm-3 {
             display: none;
           }
           </style>';
+         //echo '<script> $("#mamp-restart").modal("show"); </script>';
 
     }
     else  {
+        $class = '';
         echo "<p class='bg-success'> <span class='glyphicon glyphicon-save'></span>  Installing Wordpress now ... </p>";
         echo '<script> 
         $("#progress").attr("aria-valuenow", "97");
@@ -188,22 +213,14 @@
             //system('open ./closeMAMP.app');
             // shell_exec('sh ./closeMAMP.app');
 
-            sleep(8);
             echo "<p class='bg-warning'> <span class='glyphicon glyphicon-exclamation-sign'></span>  Closing MAMP</p>";
             // Restart MAMP
-            echo '<script> 
-                    function confirmDelete() { 
-                     if (confirm("Please open MAMP and restart apache and mysql. Have you re-start MAMP yet?")) {
-                        return true; 
-                     } else {
-                        return false;
-                     } 
-                    } 
-                    confirmDelete();
-                    </script> ';
+            echo "<style> body.install {background: none; background-color: #ecf0f1;}</style>";
             //system('open ./openMAMP.app');
-            echo "<p class='bg-warning'> <span class='glyphicon glyphicon-exclamation-sign'></span>  Restarting MAMP</p>";
-            sleep(6);
+            // echo "<p class='bg-warning'> <span class='glyphicon glyphicon-exclamation-sign'></span>  Restarting MAMP</p>";
+            // sleep(6);
+
+            echo '<script> $("#mamp-restart").modal("show"); </script>';
 
         }
         else {
@@ -233,11 +250,12 @@
 
 ?>
 <form method="POST" name="getconfig" action="<?php echo 'http://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'] ?>?step=install">
-    <div class="col-sm-3">
-        <input id="edit" class="btn btn-default btn-lg" type="button" value="Edit" onclick="history.back();">
+    <div class="col-sm-3 <?php echo $class; ?>">
+        <input class="btn btn-default btn-lg" id="edit" class="btn btn-default btn-lg" type="button" value="Edit" onclick="history.back();">
     </div>
     <div class="col-sm-9">
         <a href="http://<?php echo $sitename.'.dev/'; ?>" id="openwp" type="submit" name="openwp" class="btn btn-danger btn-lg">Open > <?php echo $sitename.'.dev'; ?></a>
     </div>
 </form>
 </div> 
+

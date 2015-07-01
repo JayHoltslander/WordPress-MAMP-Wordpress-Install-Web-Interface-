@@ -8,21 +8,21 @@
       <form id="wpinfo" class="form-horizontal col-sm-12" action="<?php echo 'http://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'] ?>?step=verify" method="POST" name="config">
         <div class="row">
         <fieldset>
-         <div class="col-sm-6 dbinfo">
-               <div class="col-sm-12">
+         <div class="col-sm-6 animated slideInUp dbinfo">
+               <div class="col-sm-12 header-app">
                 <div class="col-xs-6">
                   <img class="img-responsive" src="core/images/mamp-logo.png" style="max-width: 245px;">
                 </div>
                 <div class="col-xs-6 check-req">                  
                   <a href="#req" data-toggle="modal" data-target="#checkreqs"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Check App  </a>
                 </div>
-                <div class="clear"></div>
+                <!-- <div class="clear"></div> -->
                 <!-- <p class="info">Welcome to the famous two-minutes WordPress installation process! Just fill in the information below and you’ll be on your way to using the most extendable and powerful personal publishing platform in the world.</p> -->
                </div>
                <!-- <div class="col-sm-9">
                 <h4>Site Info</h4>
                </div> -->
-               <div class="clear"></div>
+               <!-- <div class="clear"></div> -->
               <hr>
               <div class="clear"></div>
               <div class="control-group">
@@ -48,21 +48,21 @@
 
          <div class="col-sm-1 or-dvivider"></div>
 
-          <div class="col-sm-5 dbinfo">
+          <div class="col-sm-5 animated slideInUp dbinfo panel-left">
             <div class="col-sm-3">
                 <img src="core/images/wordpress-logo.svg">  
             </div>
             <div class="col-sm-9 dbtitle">
-                <h4>Database Info</h4>
+                <h4 class="title">Database Info</h4>
             </div>
             <div class="clear"></div>
             <hr>
             <div class="clear"></div>
 
-            <div class="control-group">
+            <div class="control-group col-sm-6">
                 <!-- Username -->
-                <label class="control-label col-sm-4" for="host">Database Host</label>
-                <div class="controls col-sm-8">
+                <label class="control-label" for="host">Database Host</label>
+                <div class="controls">
                   <!-- <select id="host" name="host">
                     <option value="127.0.0.1:3306">127.0.0.1:3306</option>
                     <option value="127.0.0.1:8889">127.0.0.1:8889</option>
@@ -73,49 +73,48 @@
                   <p class="text-muted">We will try to get the default values from MAMP. <strong>Usually is:</strong> 3306 or 8889</p>
                 </div>
               </div>
-              <div class="clear"></div>
 
-            <div class="control-group">
+            <div class="control-group col-sm-6">
                 <!-- Username -->
-                <label class="control-label col-sm-4" for="dbname">Database Name</label>
-                <div class="controls col-sm-8">
+                <label class="control-label" for="dbname">Database Name</label>
+                <div class="controls">
                   <input type="text" id="dbname" name="dbname" placeholder="ex: db_mysite" class="form-control" required>
                   <p class="text-muted">name your database</p>
                 </div>
               </div>
               <div class="clear"></div>
 
-              <div class="control-group">
+              <div class="control-group col-sm-6">
                 <!-- Username -->
-                <label class="control-label col-sm-4" for="dbuser">Database User</label>
-                <div class="controls col-sm-8">
+                <label class="control-label" for="dbuser">Database User</label>
+                <div class="controls">
                   <input type="text" id="dbuser" name="dbuser" value="<?php echo $cfg['Servers'][1]['user']; ?>" class="form-control" data-toggle="tooltip" title="By default MAMP uses root unless you have change the user" required>
                   <p class="text-muted"><?php echo $cfg['Servers'][1]['user']; ?> is the default user.</p>
                 </div>
               </div>
-              <div class="clear"></div>
 
-              <div class="control-group">
+              <div class="control-group col-sm-6">
                 <!-- Username -->
-                <label class="control-label col-sm-4" for="dbpass">Database Password</label>
-                <div class="controls col-sm-8">
+                <label class="control-label" for="dbpass">Database Password</label>
+                <div class="controls">
                   <input type="text" id="dbpass" value="<?php echo $cfg['Servers'][1]['password']; ?>" name="dbpass" class="form-control" data-toggle="tooltip" title="By default MAMP uses root unless you have change the password" required>
                   <p class="text-muted"><?php echo $cfg['Servers'][1]['password']; ?> is the default password.</p>
                 </div>
               </div>
               <div class="clear"></div>
 
-              <div class="control-group">
+              <div class="control-group col-sm-12">
                 <!-- Username -->
-                <label class="control-label col-sm-4" for="dbprefix">Database Prefix</label>
-                <div class="controls col-sm-8">
+                <label class="control-label" for="dbprefix">Database Prefix</label>
+                <div class="controls">
                   <input type="text" id="dbprefix" name="dbprefix" value="PrX_" class="form-control" data-toggle="tooltip" title="It is recommended to change your default wp_ database prefix for security reasons" required>
+                  <p class="text-muted">Note: is recommended to use something else than wp_ for security reasons.</p>
                 </div>
               </div>
           </div>
           <div class="clear"></div>          
           
-       <div class="col-sm-4"></div>
+       <div class="col-sm-4 animated slideInUp"></div>
           <div class="control-group col-sm-4 top">
             <!-- Button -->
             <div class="controls">
