@@ -1,7 +1,7 @@
 <?php
     if(!defined('WPINSTALL')) {die('Direct access not permitted'); }
 ?>
-<div class="navbar-fixed-top site-manager">
+<div class="navbar-fixed-top site-manager <?php echo $class; ?> animated slideInDown">
   <div class="container">
     <div class="row">
       <div class="col-xs-4 home-link">

@@ -5729,12 +5729,15 @@ footer p {
 .footer-banner .footer-title {
     color: #fff
 }
+.footer-banner i {
+    padding-right: 8px;
+}
 .footer-banner a {
     color: #b7f5e9;
-    text-decoration: underline
+    text-decoration: none;
 }
 .footer-banner a:hover {
-    text-decoration: none
+    text-decoration: underline;
 }
 .footer-banner ul {
     padding: 0;
@@ -5965,6 +5968,7 @@ p {
     padding: 15px;
 }
 footer p {
+    color: #7f8c8d;
     padding: 0;
     font-size: 15px;
     line-height: 20px;
@@ -6087,14 +6091,17 @@ select#sitemanager {
     color: #959595;
 }
 .footer {
-    padding: 72px 0;
+/*    padding: 72px 0;
     width: 100%;
-    height: 60px;
-    background-color: #f5f5f5;
+    height: 60px;*/
+    background-color: #bdc3c7;
     margin-top: 100px;
-    position: relative;
+/*    position: relative;
     bottom: 0;
-    text-align: center;
+    text-align: center;*/
+}
+.footer-title {
+    color: #2c3e50
 }
 .text-muted {
     color: #777;
@@ -6433,4 +6440,61 @@ hr {
     background: -ms-linear-gradient(left, #e74c3c 0%, #c0392b 100%);
     background: linear-gradient(to right, #e74c3c 0%, #c0392b 100%);
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#e74c3c', endColorstr='#c0392b', GradientType=1);
+}
+.decide h2 {
+    font-size: 43px;
+    text-align: center;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+}
+.decide h4 {
+    padding-top: 15px;
+    margin-top: 0;
+    text-align: center;
+    font-weight: 300;
+}
+.copy {
+    margin-top: 35px;
+    text-align: center;
+}
+.radio  {
+    border-radius: 5px;
+    padding: 45px;
+    background-color: #fff;
+    border-color: #ddd;
+    border-width: 1px;
+    border-radius: 4px 4px 0 0;
+    border: 1px solid #e5e5e5;
+    text-align: center;
+}
+.make-a-choice {
+    max-width: 760px;
+    margin: 0 auto;
+}
+.make-a-choice .half {
+    width: 45%;
+    float: left;
+}
+.make-a-choice .divider {
+    width: 10%;
+    max-width: 10%;
+    max-height: 110px;
+    height: auto;
+    padding: 3px;
+    float: left;
+}
+.the_path {
+    margin-top: 59px;
+}
+.make-a-choice label {
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 19px;
+}
+.make-a-choice input {
+    outline: none;
+}
+.show {
+    display: block !important
 }

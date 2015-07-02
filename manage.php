@@ -404,27 +404,43 @@ define( "UPLOADS", WP_CONTENT_FOLDERNAME . "/'.$uplaoddir.'");';
 			
 		</div>
 	</div>
+<div class="clear"></div>
+<footer class="footer" style="margin-top: 260px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-7">
+          <h3 class="footer-title">About WP MAMP Manager</h3>
+          <p>Welcome to the famous two-minutes WordPress installation process! Just fill in the information below and you’ll be on your way to using the most extendable and powerful personal publishing platform in the world.</a>
+          </p>
 
-	<footer class="footer navbar-fixed-bottom">
-	<div class="container">
+          <a class="footer-brand" href="http://velismichel.com" target="_blank">
+            <img class="img-responsive" src="core/images/mamp-logo.png" style="max-width: 245px;">
+          </a>
+        </div> <!-- /col-xs-7 -->
 
-	  
-	  <div class="col-sm-6 author">
-	    <p><a href="https://github.com/michelve/wordpress-mamp-localhost-generator" target="_blank">GitHub Project</a>
-	      <br> Author: <a href="http://velismichel.com/" target="_blank">Michel Velis</a></p>
-	  </div>
-
-	    <div class="col-sm-6 donate">
-	      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-	        <input type="hidden" name="cmd" value="_s-xclick">
-	        <input type="hidden" name="hosted_button_id" value="WN72DLG847QRC">
-	        <input type="image" src="core/images/donate.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-	        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-	      </form>
-	    </div>
-
-	</div>
-	</footer>
+        <div class="col-xs-5">
+          <div class="footer-banner">
+            <h3 class="footer-title">Help and Documentation</h3>
+            <ul>
+              <li><i class="fa fa-book"></i><a href="documentation.html">Documentation and Guide</a></li>
+              <li><i class="glyphicon glyphicon-th-list" aria-hidden="true"></i><a href="#req" data-toggle="modal" data-target="#checkreqs">Check Requirements</a></li>
+              <li><i class="fa fa-user"></i> <a href="http://velismichel.com" target="_blank">Author WebSite</a></li>
+              <li><i class="fa fa-envelope-o"></i> <a href="core/feedback/send.php">Send Feedback</a></li>
+              <li><i class="fa fa-github-square"></i><a href="https://github.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-" target="_blank">GitHub Project</a></li>
+            </ul>
+            <div class="donate">
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="hosted_button_id" value="WN72DLG847QRC">
+                  <input type="image" src="core/images/donate.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 	<script type="text/javascript" src="core/js/app.js"></script>
 
 </body>

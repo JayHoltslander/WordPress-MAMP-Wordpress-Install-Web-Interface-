@@ -1,6 +1,6 @@
 <?php if(!defined('WPINSTALL')) {die('Direct access not permitted'); }?>
 
-<div class="row step1">
+<div class="row step1 <?php echo $class; ?>">
       <div class="clear"></div>
 
       <div class="error" style="display:none"></div>
@@ -8,7 +8,7 @@
       <form id="wpinfo" class="form-horizontal col-sm-12" action="<?php echo 'http://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'] ?>?step=verify" method="POST" name="config">
         <div class="row">
         <fieldset>
-         <div class="col-sm-6 animated slideInUp dbinfo">
+         <div class="col-sm-6 animated slideInLeft dbinfo">
                <div class="col-sm-12 header-app">
                 <div class="col-xs-6">
                   <img class="img-responsive" src="core/images/mamp-logo.png" style="max-width: 245px;">
@@ -48,7 +48,7 @@
 
          <div class="col-sm-1 or-dvivider"></div>
 
-          <div class="col-sm-5 animated slideInUp dbinfo panel-left">
+          <div class="col-sm-5 animated slideInRight dbinfo panel-left">
             <div class="col-sm-3">
                 <img src="core/images/wordpress-logo.svg">  
             </div>
@@ -114,10 +114,10 @@
           </div>
           <div class="clear"></div>          
           
-       <div class="col-sm-4 animated slideInUp"></div>
+       <div class="col-sm-4"></div>
           <div class="control-group col-sm-4 top">
             <!-- Button -->
-            <div class="controls">
+            <div class="controls animated slideInUp">
               <button type="submit" name="config" class="btn btn-success btn-lg btn-block"> Continue <i class="fa fa-angle-double-right"></i> </button>
               <br> <center><a href="documentation.html">Help and Documentation Guide</a></center>
             </div>
