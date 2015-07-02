@@ -5,9 +5,9 @@
         $email = $_POST['email'];
         $message = $_POST['message'];
         $human = intval($_POST['human']);
-        $from = 'Demo Contact Form'; 
+        $from = 'DWP MAMP Manager'; 
         $to = 'mvelis90@gmail.com'; 
-        $subject = 'Message from Contact Demo ';
+        $subject = 'Message from WP MAMP Manager';
         
         $body ="From: $name\n E-Mail: $email\n Message:\n $message";
 
@@ -189,7 +189,7 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
           </div>
         </div>
     </footer>
-    <?php include 'core/box.php' ?>
+    <?php include '../box.php' ?>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
     <script type="text/javascript" src="core/js/app.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
