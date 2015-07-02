@@ -171,7 +171,7 @@ if (isset($_POST['config'])) {
                             </div>
                             <div class="clear"></div>
                             <div class="copy">
-                              <p class="palette-paragraph">Author:  <a href="http://velismichel.com">Miche Velis</a> <br>
+                              <p class="palette-paragraph">Author:  <a href="http://velismichel.com">Michel Velis</a> <br>
                               <i class="fa fa-github-square"></i> <a href="https://github.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-" target="_blank">GitHub Project</a>
                               </p>
                             </div>
