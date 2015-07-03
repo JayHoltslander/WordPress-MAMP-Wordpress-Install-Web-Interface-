@@ -61,11 +61,15 @@ $config_file_path = 'core/temp/config.php';
 ?>
 <html>
   <head>
-    <title>WordPress Manager</title>
+    <title>WP MAMP Manager</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="core/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="core/css/form.css">
     <link rel="stylesheet" type="text/css" href="core/css/app.css">
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="core/js/jquery.cookie.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <style type="text/css">
     .progress {display: none}
@@ -441,7 +445,8 @@ define( "UPLOADS", WP_CONTENT_FOLDERNAME . "/'.$uplaoddir.'");';
       </div>
     </div>
   </footer>
-	<script type="text/javascript" src="core/js/app.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="core/js/app.js"></script>
 
 </body>
 </html> 
