@@ -1,7 +1,7 @@
 <?php 
 // @Author: Michel Velis
 // @Repository: https://github.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-
-// @Version: 1.0.5
+// @Version: 1.0.6
 // @Author URL: https://velismichel.com
 
 
@@ -11,7 +11,7 @@ define('DOCUMENT_ROOT', dirname(__file__).'/');
 // session_start(); 
 
 // Report runtime errors
-error_reporting(E_ERROR | E_PARSE);
+error_reporting(0);
 
 // Include MAMP Files
 if(file_exists('/Applications/MAMP/bin/mamp/php/functions.php')) {

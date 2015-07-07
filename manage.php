@@ -1,7 +1,7 @@
 <?php 
 // @Author: Michel Velis
 // @Repository: https://github.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-
-// @Version: 1.0.4
+// @Version: 1.0.6
 // @Author URL: https://velismichel.com
 
 
@@ -21,9 +21,7 @@ if(file_exists('/Applications/MAMP/bin/phpMyAdmin/config.inc.php')) {
   include_once('/Applications/MAMP/bin/phpMyAdmin/config.inc.php');
 }
 
-
 $nullpath = '';
-
 $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 $localhostpath = pathinfo(realpath($nullpath), PATHINFO_DIRNAME);
 
