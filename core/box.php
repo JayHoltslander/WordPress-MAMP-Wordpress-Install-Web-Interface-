@@ -49,6 +49,18 @@
                   echo '<p class="bg-danger"> <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> httpd-vhosts.conf is not writable. Please correct this, see the documentation. <br> <b>Location:</b> '.$amp_host_file.'</p>';
               }
           ?>
+          <?php 
+              //version control
+                $fileAPP_version = 'https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/temp/sites/.config';
+                $get_version = file_get_contents($fileAPP_version);
+
+                if ($current_version >= $get_version) {
+                echo '<p class="bg-info"> <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> No Updates Available</p>';
+                }
+                else {
+                echo '<p class="bg-warning"> <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Please update the app.</p>';
+                }
+            ?>
 
       </div>
       <div class="modal-footer">

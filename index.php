@@ -20,7 +20,9 @@ if(file_exists('/Applications/MAMP/bin/mamp/php/functions.php')) {
 if(file_exists('/Applications/MAMP/bin/phpMyAdmin/config.inc.php')) {
   include_once('/Applications/MAMP/bin/phpMyAdmin/config.inc.php');
 }
-  
+
+$current_version = '1.0.6';
+
 $nullpath = '';
 $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 //$localhostpath = pathinfo(realpath($nullpath), PATHINFO_DIRNAME);
@@ -285,6 +287,7 @@ if (isset($_POST['config'])) {
       </div>
     </div>
   </footer>
+
 
   <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
   <script type="text/javascript" src="core/js/app.js"></script>

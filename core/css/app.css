@@ -6147,7 +6147,7 @@ select#sitemanager {
 }
 .row.step2,
 .row.step3 {
-    margin-top: 59px;
+    margin-top: 20px;
 }
 .dark,
 .white {
@@ -6239,7 +6239,7 @@ form.form-horizontal.col-sm-12.wp {
 /*site manager*/
 
 form.form-horizontal.col-sm-12 {
-    margin-top: 65px;
+    margin-top: 20px;
 }
 #sitemanager {
     background: #ecf0f1;
@@ -6497,4 +6497,11 @@ hr {
 }
 .show {
     display: block !important
+}
+a span.update-bg {
+    color: #fff;
+    background: #e74c3c;
+}
+.center {
+    text-align: center;
 }
