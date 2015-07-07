@@ -130,7 +130,6 @@
 
     // Here we define the string data that is to be placed into the file
     $VirtualHost = '
-
 <VirtualHost *:80> 
     ServerAdmin admin@'.$sitename.'.com
     DocumentRoot '.$path.'/'.$sitename.'.com'.'
@@ -138,8 +137,6 @@
     ErrorLog logs/'.$sitename.'.dev-error_log
     CustomLog logs/'.$sitename.'.dev-access_log common
 </VirtualHost>
-
-
 ';
 
         $mamphost = fopen($httpd_vhostsfile, "a+"); 
@@ -183,7 +180,7 @@
             // flush dns
             system('dscacheutil -flushcache');
             echo "<p class='bg-warning'> <span class='glyphicon glyphicon-exclamation-sign'></span>  Flushing DNS</p>";
-            echo "<p class='bg-warning'> <span class='glyphicon glyphicon-exclamation-sign'></span>  Closing MAMP</p>";
+            echo "<p class='bg-warning'> <span class='glyphicon glyphicon-exclamation-sign'></span> MAMP was Re-started</p>";
             echo "<style> body.install {background: none; background-color: #ecf0f1;}</style>";
             echo '<script> $("#mamp-restart").modal("show"); </script>';
         }
