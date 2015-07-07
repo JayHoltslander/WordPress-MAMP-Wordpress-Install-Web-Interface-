@@ -9,11 +9,9 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <div class="infobox">
-            i
-        </div>
+        <div class="infobox"> i </div>
         <h4 class="modal-title" id="myModalLabel">
-        Re-Start MAMP
+            Re-Start MAMP
         </h4>
       </div>
       <div class="modal-body">
@@ -27,35 +25,17 @@
 </div>
 
 <div class="row step3 install-output"> 
-<?php
-    if (is_dir($sitename.'.com')) {
-            rmdir($sitename.'.com');
-    }
-?>
-
+<?php if (is_dir($sitename.'.com')) {rmdir($sitename.'.com'); } ?>
 <?php
     if (is_dir($localhostpath.'/'.$sitename.'.com/') == true) {
         $class = 'hide';
-        echo '<div class="alert alert-danger" role="alert">
-              <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-              <span class="sr-only">Error:</span>
-              Site '.$sitename.'.com exist
-            </div>';
-        echo ' <style type="text/css">
-          .step2 {
-            display: block;
-          }
-          .step1. .col-sm-3 {
-            display: none;
-          }
-          </style>';
-         //echo '<script> $("#mamp-restart").modal("show"); </script>';
-
+        echo '<div class="alert alert-danger" role="alert"> <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> <span class="sr-only">Error:</span> Site '.$sitename.'.com exist </div>'; 
+        echo '<style type="text/css"> .step2 {display: block; } .step1. .col-sm-3 {display: none; } </style>';
     }
     else  {
         $class = '';
         echo "<p class='bg-success'> <span class='glyphicon glyphicon-save'></span>  Installing Wordpress now ... </p>";
-        echo ' <style type="text/css"> .step2 {display: block; } .step1, .installinfo {display: none; } </style>';
+        echo '<style type="text/css"> .step2 {display: block; } .step1, .installinfo {display: none; } </style>';
 
         $wordpress_zip = 'latest.zip';
 
@@ -84,7 +64,6 @@
               $zip->close();
               rename ($path.'/wordpress', $path.'/'.$sitename.'.com');
               unlink('latest.zip');
-              sleep(1);
               echo "<p class='bg-success'> <span class='glyphicon glyphicon-compressed'></span> GREAT: $wordpresszip extracted to $path </p>";
               mkdir($path.'/'.$sitename.'.com/wp-content/uploads', 0755);
             }
@@ -101,7 +80,6 @@
             echo "failed to copy $wp_config_sample ...\n";
         }
         else {
-            sleep(1);
             echo "<p class='bg-success'> <span class='glyphicon glyphicon-copy'></span> Notice: wp-config.file created </p>";
         }
 
@@ -141,31 +119,39 @@
         }
         fclose($f);  
 
-        //copy('core/setup.php', $path.'/'.$sitename.'.com/'.'/setup.php');
-
         #lets craete the host files for the site
         $httpd_vhostsfile = '/Applications/MAMP/conf/apache/extra/httpd-vhosts.conf';
         $httpd_vhosts = file_get_contents('/Applications/MAMP/conf/apache/extra/httpd-vhosts.conf');
         $privatehostfile = '/private/etc/hosts';
 
-        $VirtualHost = '<VirtualHost *:80> 
+        // line to add to hosts
+        $localhost_site = '
+127.0.0.1 '.$sitename.'.dev';
+
+    // Here we define the string data that is to be placed into the file
+    $VirtualHost = '
+
+<VirtualHost *:80> 
     ServerAdmin admin@'.$sitename.'.com
     DocumentRoot '.$path.'/'.$sitename.'.com'.'
     ServerName '.$sitename.'.dev'.'
     ErrorLog logs/'.$sitename.'.dev-error_log
     CustomLog logs/'.$sitename.'.dev-access_log common
-</VirtualHost>';
+</VirtualHost>
 
-        // line to add to hosts
-        $localhost_site = '127.0.0.1  '.$sitename.'.dev';
 
-        $mamphost = file_put_contents($httpd_vhostsfile, $VirtualHost.PHP_EOL , FILE_APPEND);
-        $hosts = file_put_contents($privatehostfile, $localhost_site.PHP_EOL , FILE_APPEND);
+';
 
-        fwrite($mamphost, $VirtualHost);
-        fwrite($hosts, $localhost_site);
-        fclose($mamphost);
-        fclose($hosts);
+        $mamphost = fopen($httpd_vhostsfile, "a+"); 
+        $host_file = fopen($privatehostfile, "a+"); 
+
+        fwrite($mamphost, $VirtualHost); // write it 
+        fwrite($host_file, $localhost_site); // write it 
+
+        fclose($mamphost); 
+        fclose($host_file); 
+
+
         echo "<p class='bg-success'> <span class='glyphicon glyphicon-exclamation-sign'></span> Virtual Host Added to MAMP -> $httpd_vhostsfile </p>";
 
         #check localhost for permission
@@ -174,8 +160,6 @@
             // connect to database
             $username = $dbuser;
             $password = $dbpass;
-            // $username = 'root';
-            // $password = 'root';
 
             // Create connection
             $conn = new mysqli($host, $username, $password);
@@ -193,35 +177,22 @@
             }
 
             $conn->close();
-             echo "<p class='bg-info'> <span class='glyphicon glyphicon-exclamation-sign'></span>  Database created </p>";
-
-             echo "<p class='bg-success'> <span class='glyphicon glyphicon-exclamation-sign'></span>  The hosts file is writable at -> $privatehostfile </p>";
-
+            echo "<p class='bg-info'> <span class='glyphicon glyphicon-exclamation-sign'></span>  Database created </p>";
+            echo "<p class='bg-success'> <span class='glyphicon glyphicon-exclamation-sign'></span>  The hosts file is writable at -> $privatehostfile </p>";
             echo "<p class='bg-info'> <span class='glyphicon glyphicon-exclamation-sign'></span>  Host address added</p>";
-
             // flush dns
             system('dscacheutil -flushcache');
             echo "<p class='bg-warning'> <span class='glyphicon glyphicon-exclamation-sign'></span>  Flushing DNS</p>";
-            // close MAMP
-            //system('open ./closeMAMP.app');
-            // shell_exec('sh ./closeMAMP.app');
-
             echo "<p class='bg-warning'> <span class='glyphicon glyphicon-exclamation-sign'></span>  Closing MAMP</p>";
-            // Restart MAMP
             echo "<style> body.install {background: none; background-color: #ecf0f1;}</style>";
-            //system('open ./openMAMP.app');
-            // echo "<p class='bg-warning'> <span class='glyphicon glyphicon-exclamation-sign'></span>  Restarting MAMP</p>";
-            // sleep(6);
-
             echo '<script> $("#mamp-restart").modal("show"); </script>';
-
         }
         else {
-             echo "<p class='bg-danger'> <span class='glyphicon glyphicon-exclamation-sign'></span>  The hosts file is not writable at -> $privatehostfile (fix this issue).</p>";
-             echo "<p class='bg-danger'> <span class='glyphicon glyphicon-exclamation-sign'></span>  Installation cancelled.</p>";
+            echo "<p class='bg-danger'> <span class='glyphicon glyphicon-exclamation-sign'></span>  The hosts file is not writable at -> $privatehostfile (fix this issue).</p>";
+            echo "<p class='bg-danger'> <span class='glyphicon glyphicon-exclamation-sign'></span>  Installation cancelled.</p>";
         }
-         echo ' <style type="text/css"> #getconfig {display: none; } </style>';
-         
+        echo ' <style type="text/css"> #getconfig {display: none; } </style>';
+
         // lets clean the installation
         $readmehtml = $path.'/'.$sitename.'.com/readme.html';
         $licensetxt = $path.'/'.$sitename.'.com/license.txt';
