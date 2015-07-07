@@ -55,16 +55,9 @@
     else  {
         $class = '';
         echo "<p class='bg-success'> <span class='glyphicon glyphicon-save'></span>  Installing Wordpress now ... </p>";
-        echo '<script> 
-        $("#progress").attr("aria-valuenow", "97");
-            $("#progress").css( "width", "97%" );
-            $("#progress" ).html( "97%" );
-        </script>';
-
-        $wordpress_zip = 'latest.zip';
-
         echo ' <style type="text/css"> .step2 {display: block; } .step1, .installinfo {display: none; } </style>';
 
+        $wordpress_zip = 'latest.zip';
 
         if (file_exists($wordpress_zip)) {
             echo "Wordpress zip file exist";
@@ -228,6 +221,7 @@
              echo "<p class='bg-danger'> <span class='glyphicon glyphicon-exclamation-sign'></span>  Installation cancelled.</p>";
         }
          echo ' <style type="text/css"> #getconfig {display: none; } </style>';
+         
         // lets clean the installation
         $readmehtml = $path.'/'.$sitename.'.com/readme.html';
         $licensetxt = $path.'/'.$sitename.'.com/license.txt';
@@ -242,11 +236,6 @@
             rmdir($sitename.'.com');
         }
     }
-    echo '<script> 
-        $("#progress").attr("aria-valuenow", "98");
-            $("#progress").css( "width", "98%" );
-            $("#progress" ).html( "98%" );
-        </script>';
 
 ?>
 <form method="POST" name="getconfig" action="<?php echo 'http://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'] ?>?step=install">

@@ -202,7 +202,6 @@ if (isset($_POST['config'])) {
                $('.footer').show();
                $('.the_path').hide();
                $.cookie('choice', 'picked', { expires: 30 });
-
           }
           else {
               $(appended).remove();
@@ -217,13 +216,7 @@ if (isset($_POST['config'])) {
         include 'core/verify.php';
       } 
       elseif (strpos($url,'?step=install') !== false){
-        echo '<div id="loader-box"> 
-            <div class="loader"></div>
-        </div>';
-        sleep(3);
         include 'core/install.php'; 
-        sleep(1);
-        echo '<script> $(window).load(function() {$("#loader-box").fadeOut("slow"); }) </script>'.'<style> body.install {background: none}</style>'; 
       }
       else {
         include 'core/init.php';
@@ -231,25 +224,6 @@ if (isset($_POST['config'])) {
     ?>
 
   </div> <!-- end of container -->
-
-
-  <?php 
-    if (strpos($url,'?step=verify') !== false) {
-      echo '<script> 
-      $("#progress").attr("aria-valuenow", "85");
-          $("#progress").css( "width", "85%" );
-          $("#progress" ).html( "85%" );
-      </script>';
-    }
-    elseif (strpos($url,'?step=install') !== false) {
-      echo '<script> 
-      $("#progress").attr("aria-valuenow", "96");
-          $("#progress").css( "width", "96%" );
-          $("#progress" ).html( "96%" );
-      </script>';
-    }
-  ?>
-  
 
 <footer class="footer <?php echo $class; ?>">
     <div class="container">
