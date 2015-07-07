@@ -2,10 +2,7 @@
 Install the latest version of wordpress from your browser using localhost. This web app will guide you to get your local dev site up and running in matter of seconds. 
 
 
-###### Command Line Version
-* Repo Link: https://github.com/michelve/wordpress-mamp-localhost-generator
-
-## Features
+### Features
 	1. Get Latest version of wordpress
 	2. Setup Wordpress
 	3. Create Database
@@ -22,14 +19,14 @@ Install the latest version of wordpress from your browser using localhost. This 
 		* Change plugins dir name
 		* More secure .htaccess (coming soon)
 
-## Videos and Demos 
+### Videos and Demos 
 
 [![Application Site Manager Demo](https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/video-sitemanager.png)](https://www.youtube.com/watch?v=VENQ6TzOGQU "Application Site Manager Demo")
 
 [![Application Preview and Demo](https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/preview.png)](https://www.youtube.com/watch?v=VD76l3K2P2o "Application Preview and Demo")
 
 
-## Requirements 
+### Requirements 
 see the documentation.html file for more detailed steps and guide 
 
 
@@ -59,7 +56,7 @@ see the documentation.html file for more detailed steps and guide
 
 
 
-## How to use
+### How to use
 	* use the documentation.html file 
 
 	1. Move the web app into the localhost folder 
@@ -69,7 +66,7 @@ see the documentation.html file for more detailed steps and guide
 	5. please note this in early stages if you have any issues please let me know
 
 
-## Screen-shots
+### Screen-shots
 
 <img src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/screenshot-1.jpg"/>
 <img src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/screenshot-2.jpg"/>
