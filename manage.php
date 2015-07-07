@@ -21,6 +21,7 @@ if(file_exists('/Applications/MAMP/bin/phpMyAdmin/config.inc.php')) {
   include_once('/Applications/MAMP/bin/phpMyAdmin/config.inc.php');
 }
 
+$current_version = '1.0.6';
 $nullpath = '';
 $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 $localhostpath = pathinfo(realpath($nullpath), PATHINFO_DIRNAME);
