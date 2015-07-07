@@ -218,7 +218,7 @@ $config_file_path = 'core/temp/config.php';
 								  <hr>
 								  <div class="form-group col-sm-12">
 								    <label for="plugins">Rename Plugins Dir</label>
-								    <input type="text" name="plugins" class="form-control" id="plugins" placeholder="rename wp-content">
+								    <input type="text" name="plugins" class="form-control" id="plugins" placeholder="rename plugins dir">
 								    <p>enter the new for plugins</p>
 								  </div>
 								  <hr>
