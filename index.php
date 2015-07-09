@@ -1,44 +1,37 @@
 <?php 
-// @Author: Michel Velis
-// @Repository: https://github.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-
-// @Version: 1.0.6
-// @Author URL: https://velismichel.com
+  // @Author: Michel Velis
+  // @Repository: https://github.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-
+  // @Version: 1.0.7
+  // @Author URL: https://velismichel.com
 
+  // disable runtime errors
+  error_reporting(0);
 
-define('WPINSTALL', TRUE); 
-define('DOCUMENT_ROOT', dirname(__file__).'/');
-// ob_start(); 
-// session_start(); 
+  // Include MAMP Files
+  if(file_exists('/Applications/MAMP/bin/mamp/php/functions.php')) {
+    include_once '/Applications/MAMP/bin/mamp/php/functions.php';
+  }
+  if(file_exists('/Applications/MAMP/bin/phpMyAdmin/config.inc.php')) {
+    include_once('/Applications/MAMP/bin/phpMyAdmin/config.inc.php');
+  }
+  // if(file_exists('core/connection.php')) {
+  //   include_once('core/connection.php');
+  // }
 
-// Report runtime errors
-error_reporting(0);
+  define('WPINSTALL', TRUE); 
+  define('DOCUMENT_ROOT', dirname(__file__).'/');
 
-// Include MAMP Files
-if(file_exists('/Applications/MAMP/bin/mamp/php/functions.php')) {
-  include_once '/Applications/MAMP/bin/mamp/php/functions.php';
-}
-if(file_exists('/Applications/MAMP/bin/phpMyAdmin/config.inc.php')) {
-  include_once('/Applications/MAMP/bin/phpMyAdmin/config.inc.php');
-}
+  $current_version = '1.0.7';
+  $nullpath = '';
+  $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 
-$current_version = '1.0.6';
+  $result = exec('grep -r ^DocumentRoot /Applications/MAMP/conf/apache/httpd.conf');
+  $result = substr($result, stripos($result, 'DocumentRoot'));
+  $localhostpath = trim(str_replace(array('DocumentRoot', '"'), '', $result));
+  $site_path_var = $_SERVER["DOCUMENT_ROOT"];
+  $file_location = $_SERVER['SCRIPT_FILENAME'];
 
-$nullpath = '';
-$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-//$localhostpath = pathinfo(realpath($nullpath), PATHINFO_DIRNAME);
-
-$result = exec('grep -r ^DocumentRoot /Applications/MAMP/conf/apache/httpd.conf');
-$result = substr($result, stripos($result, 'DocumentRoot'));
-$localhostpath = trim(str_replace(array('DocumentRoot', '"'), '', $result));
-//echo $localhostpath;
-
-
-$site_path_var = $_SERVER["DOCUMENT_ROOT"];
-$file_location = $_SERVER['SCRIPT_FILENAME'];
-//echo $localhostpath;
-
-if (isset($_POST['config'])) {
-
+  if (isset($_POST['config'])) {
     $protectsession = "<?php if(!defined('WPINSTALL')) {die('Direct access not permitted'); }?>"."\n";
     $php_starts      = '<?php ';
       $localhostdir  = '  $localhostdir = "' . $_REQUEST['localhostdir'];
@@ -62,7 +55,6 @@ if (isset($_POST['config'])) {
       fwrite($config_file,$host."\";\n");
       fwrite($config_file,$dbpass."\";\n");
     fwrite($config_file,$php_ends."\n");
-
     fclose($config_file);
     //print_r(error_get_last());`
     mkdir($_REQUEST['sitename'].'.com', 0755);
@@ -70,20 +62,13 @@ if (isset($_POST['config'])) {
     if (is_dir($_REQUEST['sitename'].'.com')) {
             rmdir($_REQUEST['sitename'].'.com');
     }
-
-
     if (empty($_POST['localhostdir']) || empty($_POST['sitename']) || empty($_POST['dbname']) || empty($_POST['dbuser']) || empty($_POST['host']) || empty($_POST['dbpass']))  {
         print ("please enter the required values");
     }
   }
-
   if(isset($_COOKIE['choice'])) {
     $class = 'show';
     $hide_picker = 'hide';
-  }
-  else {
-
-
   }
 ?>
 <html>
@@ -106,10 +91,7 @@ if (isset($_POST['config'])) {
   <div id="sitemanager" class="showsites" style="display:none">
     <div class="body">
       <?php
-        //var_dump($_SERVER);
-        //echo exec('pwd');
         $row = exec('cd '.$localhostpath.'; ls ',$output,$error);
-
         if($error){
           echo "Error : $error<br/>\n";
         exit;
@@ -137,14 +119,11 @@ if (isset($_POST['config'])) {
       ?>
     </div>
   </div>
-  
   <?php include 'core/box.php' ?>
-
   <div class="container main-wrapper">
     <div class="row">
     </div>
     <div class="clear"></div>
-
     <div class="the_path <?php echo $hide_picker; ?>" role="form">
         <div class="row">
             <div class="decide">
@@ -191,7 +170,6 @@ if (isset($_POST['config'])) {
          $('.progress').hide();
          $('.footer').hide();
       });
-
       // check for chocie
       $('input:radio[name="choice"]').change(
       function(){
@@ -204,12 +182,10 @@ if (isset($_POST['config'])) {
                $.cookie('choice', 'picked', { expires: 30 });
           }
           else {
-              $(appended).remove();
+              $(location).attr('href','documentation.html');
           }
       });
     </script>
-    
-
     <?php 
       include 'core/setup.php';
       if (strpos($url,'?step=verify') !== false) {
@@ -222,7 +198,6 @@ if (isset($_POST['config'])) {
         include 'core/init.php';
       }
     ?>
-
   </div> <!-- end of container -->
 
 <footer class="footer <?php echo $class; ?>">
@@ -232,7 +207,6 @@ if (isset($_POST['config'])) {
           <h3 class="footer-title">About WP MAMP Manager</h3>
           <p>Welcome to the famous two-minutes WordPress installation process! Just fill in the information below and you’ll be on your way to using the most extendable and powerful personal publishing platform in the world.</a>
           </p>
-
           <a class="footer-brand" href="http://velismichel.com" target="_blank">
             <img class="img-responsive" src="core/images/mamp-logo.png" style="max-width: 245px;">
           </a>
@@ -261,10 +235,7 @@ if (isset($_POST['config'])) {
       </div>
     </div>
   </footer>
-
-
   <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
   <script type="text/javascript" src="core/js/app.js"></script>
-
 </body>
 </html> 

@@ -121,7 +121,6 @@
 
         #lets craete the host files for the site
         $httpd_vhostsfile = '/Applications/MAMP/conf/apache/extra/httpd-vhosts.conf';
-        $httpd_vhosts = file_get_contents('/Applications/MAMP/conf/apache/extra/httpd-vhosts.conf');
         $privatehostfile = '/private/etc/hosts';
 
         // line to add to hosts
