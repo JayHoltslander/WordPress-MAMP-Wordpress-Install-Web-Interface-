@@ -1,4 +1,5 @@
 <?php if(!defined('WPINSTALL')) {die('Direct access not permitted'); }?>
+
 <div class="row step1 <?php echo $class; ?>">
     <div class="clear"></div>
     <div class="error" style="display:none"></div>

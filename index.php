@@ -17,6 +17,7 @@
   // if(file_exists('core/connection.php')) {
   //   include_once('core/connection.php');
   // }
+  
 
   define('WPINSTALL', TRUE); 
   define('DOCUMENT_ROOT', dirname(__file__).'/');
