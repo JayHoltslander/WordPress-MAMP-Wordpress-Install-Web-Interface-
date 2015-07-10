@@ -9,7 +9,6 @@
       </div>
       <div class="col-xs-8">
           <nav>
-          
             <?php 
               //version control
                 $fileAPP_version = 'https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/temp/sites/.config';
