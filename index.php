@@ -132,7 +132,7 @@
                     <div class="row">
                         <div class="make-a-choice">
                           <h2>Welcome to WP MAMP Manager</h2>
-                          <h4>What do you want to do?</h4>
+                          <h4><?php echo exec('whoami'); ?>, what do you want to do?</h4>
                           <div class="clear"></div>
                           <noscript>
                             <div class="alert alert-danger" role="alert"> <strong>WARNING:</strong> Please enable JavaScript</div>

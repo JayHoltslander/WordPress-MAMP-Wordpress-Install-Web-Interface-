@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,9 +9,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="core/css/app.css">
     <link rel="stylesheet" href="core/css/docs.css">
-  </head>
-  <body>
- 
+</head>
+
+<body>
+
     <div id="wrapper">
 
         <!-- Sidebar -->
@@ -38,65 +40,68 @@
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="container-fluid">
-            <!--    <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a> -->
+                <!--    <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a> -->
                 <div class="row" id="start">
                     <div class="col-lg-12">
-                      <div class="col-sm-3">
-                        <img class="img-responsive" src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/wpinstall.png">
-                      </div>
+                        <div class="col-sm-3">
+                            <img class="img-responsive" src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/wpinstall.png">
+                        </div>
                         <div class="col-sm-9">
-                          <h1>WordPress MAMP Wordpress Install Web Interface</h1>
-                        <p>Install the latest version of wordpress from your browser using localhost. This web app will guide you to get your local dev site up and running in matter of seconds</p>
+                            <h1>WordPress MAMP Wordpress Install Web Interface</h1>
+                            <p>Install the latest version of wordpress from your browser using localhost. This web app will guide you to get your local dev site up and running in matter of seconds</p>
 
                         </div>
 
 
-                       
+
                     </div>
                 </div>
 
                 <div class="row" id="what">
-                  <hr>
+                    <hr>
                     <div class="col-lg-12">
                         <h5>What the web app can do</h5>
-                         <ul>
-                           <li>Get Latest version of wordpress</li>
-                           <li>Setup Wordpress</li>
-                           <li>Create Database</li>
-                           <li>Create wp-config.php file</li>
-                           <li>Install Wordpress</li>
-                           <li>You are Done</li>
-                         </ul>
+                        <ul>
+                            <li>Get Latest version of wordpress</li>
+                            <li>Setup Wordpress</li>
+                            <li>Create Database</li>
+                            <li>Create wp-config.php file</li>
+                            <li>Install Wordpress</li>
+                            <li>You are Done</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
 
-            <div class="row" id="req">
-                  <hr>
+                <div class="row" id="req">
+                    <hr>
                     <div class="col-lg-12">
                         <h5>Requirements and Installation</h5>
                         <hr>
                         <h6>Step 1</h6>
-                         <ul>
-                           <li>Download and Install MAMP <a target="_blank" href="https://www.mamp.info/en/downloads/" class="btn btn-success">GET MAMP!</a> <br>
+                        <ul>
+                            <li>Download and Install MAMP <a target="_blank" href="https://www.mamp.info/en/downloads/" class="btn btn-success">GET MAMP!</a>
+                                <br>
                                 <span> <small>After you finish installing MAMP continue with the guide</small></span>
-                           </li>
+                            </li>
 
-                           <li>Use a text editor to open the main Apache configuration file, <strong>httpd.conf</strong>, which is located at: <strong>Applications/MAMP/conf/apache/httpd.conf</strong> </li>
+                            <li>Use a text editor to open the main Apache configuration file, <strong>httpd.conf</strong>, which is located at: <strong>Applications/MAMP/conf/apache/httpd.conf</strong> </li>
 
-                           <li>Scroll to the bottom of the file and locate the following lines (around 524–525):
-                            <br> <strong>and Change:</strong> <code>Virtual Hosts <br>
-                            #Include /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf</code>  
-                            <br> <strong>TO</strong> <br>
-                            <code>Virtual Hosts <br>
-                            Include /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf</code> 
-                            <br> <small>Remove the hash (pound #) sign from the beginning of the line that begins with Include</small> 
-                           </li>
-                           <li> <b>Save the File</b></li>
+                            <li>Scroll to the bottom of the file and locate the following lines (around 524–525):
+                                <br> <strong>and Change:</strong> <code>Virtual Hosts <br>
+                            #Include /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf</code>
+                                <br> <strong>TO</strong>
+                                <br>
+                                <code>Virtual Hosts <br>
+                            Include /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf</code>
+                                <br> <small>Remove the hash (pound #) sign from the beginning of the line that begins with Include</small>
+                            </li>
+                            <li> <b>Save the File</b></li>
 
-                           <li>Then locate on the dock the Finder app > right click & select <b>Go To Folder</b>  and type the following: <br>
-                            <code>/private/etc/hosts</code>
-                            <br>
-                            <small>
+                            <li>Then locate on the dock the Finder app > right click & select <b>Go To Folder</b> and type the following:
+                                <br>
+                                <code>/private/etc/hosts</code>
+                                <br>
+                                <small>
                                 <ul>
                                   <li>Right Click the file</li>
                                   <li>Select Get Info</li>
@@ -105,89 +110,98 @@
                                   <li>After your user has been added set the Privilege to: <code>READ & WRITE</code></li>
                                 </ul>
                             </small>
-                          </li>
-                         </ul>
+                            </li>
+                        </ul>
                         <hr>
 
 
-                         <h6 id="step2">MAMP Config</h6>
-                         <div class="clear"></div>
+                        <h6 id="step2">MAMP Config</h6>
+                        <div class="clear"></div>
 
 
 
-                            <div class="row">
-                              <div class="col-sm-4"> 
-                              <img class="img-responsive" src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/docs/config-dir.png"> 
-                              
-                            </div>
-                            <div class="col-sm-6"> 
-                              right click <code>httpd-vhosts.conf</code> and select > <strong>Get Info</strong>
-                            </div>
-                            <hr>
-                            <div class="clear"></div><hr>
+                        <div class="row">
                             <div class="col-sm-4">
-                              <img class="img-responsive" src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/docs/fileinfo.png"> 
-                            </div>
-                            <div class="col-sm-6"> 
-                               Click on the lock icon in the lower right corner of the Get info box. Then click the plus sign to add a new user > Add you current user and make it have <strong> Read & Read</strong> permissions. Click the lock icon to save your changes and close the window.
-                             </div>
-                             <hr>
-                            <div class="clear"></div><hr>
+                                <img class="img-responsive" src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/docs/config-dir.png">
 
-                            <div class="col-sm-4">
-                              <img class="img-responsive" src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/docs/mamp.png"> 
-                              
                             </div>
                             <div class="col-sm-6">
-                              Open MAMP and click on Preferences<br>
-                            </div>
-                            <hr>
-                            <div class="clear"></div><hr>
-
-
-                            <div class="col-sm-4">
-                              <img class="img-responsive" src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/docs/webserver.png"> 
-                            </div>
-                            <div class="col-sm-6">
-                              Click on the web server tab<br> <code>Click the folder icon to adjust your localhost directory. Select where you want to point tour local host to</code> <br>
+                                right click <code>httpd-vhosts.conf</code> and select > <strong>Get Info</strong>
                             </div>
                             <hr>
                             <div class="clear"></div>
                             <hr>
                             <div class="col-sm-4">
-                              <img class="img-responsive" src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/docs/ports.png"> 
+                                <img class="img-responsive" src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/docs/fileinfo.png">
                             </div>
                             <div class="col-sm-6">
-                              Then click on Ports Tab and use the below configuration and click OK to save the changes<br><strong>Click On Stop Server and Start MAMP after. You are all set with MAMP</strong>
+                                Click on the lock icon in the lower right corner of the Get info box. Then click the plus sign to add a new user > Add you current user and make it have <strong> Read & Read</strong> permissions. Click the lock icon to save your changes and close the window.
                             </div>
                             <hr>
-                           <div class="clear"></div>
+                            <div class="clear"></div>
+                            <hr>
 
+                            <div class="col-sm-4">
+                                <img class="img-responsive" src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/docs/mamp.png">
 
                             </div>
+                            <div class="col-sm-6">
+                                Open MAMP and click on Preferences
+                                <br>
+                            </div>
+                            <hr>
+                            <div class="clear"></div>
+                            <hr>
 
-                         <hr>
-                         <h6>Step 3</h6>
-                         <p>1. Copy or clone the web app files to your local host root directory</p>
-                         <p>2.  <strong>Open <a href="localhost/"></a> from your browser and the app should open if you put it on the root folder</strong> </p>
+
+                            <div class="col-sm-4">
+                                <img class="img-responsive" src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/docs/webserver.png">
+                            </div>
+                            <div class="col-sm-6">
+                                Click on the web server tab
+                                <br> <code>Click the folder icon to adjust your localhost directory. Select where you want to point tour local host to</code>
+                                <br>
+                            </div>
+                            <hr>
+                            <div class="clear"></div>
+                            <hr>
+                            <div class="col-sm-4">
+                                <img class="img-responsive" src="https://raw.githubusercontent.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-/master/core/images/docs/ports.png">
+                            </div>
+                            <div class="col-sm-6">
+                                Then click on Ports Tab and use the below configuration and click OK to save the changes
+                                <br><strong>Click On Stop Server and Start MAMP after. You are all set with MAMP</strong>
+                            </div>
+                            <hr>
+                            <div class="clear"></div>
 
 
+                        </div>
+
+                        <hr>
+                        <h6>Step 3</h6>
+                        <p>1. Copy or clone the web app files to your local host root directory</p>
+                        <p>2. <strong>Open <a href="localhost/"></a> from your browser and the app should open if you put it on the root folder</strong> </p>
+
+
+                    </div>
                 </div>
+
             </div>
+            <!-- /#page-content-wrapper -->
+
         </div>
-        <!-- /#page-content-wrapper -->
-
-    </div>
-    <!-- /#wrapper -->
+        <!-- /#wrapper -->
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    </script>  
-  </body>
+            $("#menu-toggle").click(function(e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+        </script>
+</body>
+
 </html>
