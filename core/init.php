@@ -1,9 +1,10 @@
 <?php if(!defined('WPINSTALL')) {die('Direct access not permitted'); }?>
+<?php $action_step= 'verify'; ?>
 
 <div class="row step1 <?php echo $class; ?>">
     <div class="clear"></div>
     <div class="error" style="display:none"></div>
-    <form id="wpinfo" class="form-horizontal col-sm-12" action="<?php echo 'http://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'] ?>?step=verify" method="POST" name="config">
+    <form id="wpinfo" class="form-horizontal col-sm-12" action="<?php echo 'http://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'] ?>?step=<?php echo $action_step; ?>" method="POST" name="config">
         <div class="row">
             <fieldset>
                 <div class="col-sm-6 animated slideInLeft dbinfo">
@@ -11,7 +12,7 @@
                         <div class="col-xs-6">
                             <img class="img-responsive" src="core/images/mamp-logo.png" style="max-width: 245px;">
                         </div>
-                        <div class="col-xs-6 check-req">                  
+                        <div class="col-xs-6 check-req">
                             <a href="#req" data-toggle="modal" data-target="#checkreqs"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Check App  </a>
                         </div>
                     </div>
@@ -39,7 +40,7 @@
                 <div class="col-sm-1 or-dvivider"></div>
                 <div class="col-sm-5 animated slideInRight dbinfo panel-left">
                     <div class="col-sm-3">
-                        <img src="core/images/wordpress-logo.svg">  
+                        <img src="core/images/wordpress-logo.svg">
                     </div>
                     <div class="col-sm-9 dbtitle">
                         <h4 class="title">Database Info</h4>

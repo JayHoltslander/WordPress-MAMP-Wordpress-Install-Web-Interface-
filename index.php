@@ -1,4 +1,4 @@
-<?php 
+<?php
     // @Author: Michel Velis
     // @Repository: https://github.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-
     // @Version: 1.0.7
@@ -18,11 +18,12 @@
     //   include_once('core/connection.php');
     // }
 
-    define('WPINSTALL', TRUE); 
+    define('WPINSTALL', TRUE);
     define('DOCUMENT_ROOT', dirname(__file__).'/');
 
     $current_version = '1.0.7';
     $nullpath = '';
+    $action_link = 'http://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
     $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 
     $result = exec('grep -r ^DocumentRoot /Applications/MAMP/conf/apache/httpd.conf');
@@ -166,7 +167,7 @@
                 </div>
             </div>
         </div>
-        
+
         <script>
             $(document).ready(function() {
                 $('.site-manager').hide();
@@ -192,16 +193,16 @@
                 });
         </script>
 
-        <?php 
+        <?php
             include 'core/setup.php';
             if (strpos($url,'?step=verify') !== false) {
-                include 'core/verify.php'; 
-            } 
+                include 'core/verify.php';
+            }
             elseif (strpos($url,'?step=install') !== false){
-                include 'core/install.php'; 
-            } 
+                include 'core/install.php';
+            }
             else {
-                include 'core/init.php'; 
+                include 'core/init.php';
             }
         ?>
   </div> <!-- end of container -->
@@ -242,7 +243,7 @@
             </div>
         </div>
     </footer>
-    
+
     <!-- jQuery Validate -->
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
     <!-- MAIN JS APP File -->

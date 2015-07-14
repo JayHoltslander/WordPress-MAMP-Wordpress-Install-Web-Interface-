@@ -2,7 +2,7 @@
     if(!defined('WPINSTALL')) {die('Direct access not permitted'); }
 ?>
 
-<style type="text/css"> .step1, .step2 {display: none; } </style> 
+<style type="text/css"> .step1, .step2 {display: none; } </style>
 
 <div class="modal fade" id="mamp-restart" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
@@ -22,12 +22,12 @@
     </div>
 </div>
 
-<div class="row step3 install-output"> 
+<div class="row step3 install-output">
     <?php if (is_dir($sitename.'.com')) {rmdir($sitename.'.com'); } ?>
     <?php
         if (is_dir($localhostpath.'/'.$sitename.'.com/') == true) {
             $class = 'hide';
-            echo '<div class="alert alert-danger" role="alert"> <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> <span class="sr-only">Error:</span> Site '.$sitename.'.com exist </div>'; 
+            echo '<div class="alert alert-danger" role="alert"> <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> <span class="sr-only">Error:</span> Site '.$sitename.'.com exist </div>';
             echo '<style type="text/css"> .step2 {display: block; } .step1. .col-sm-3 {display: none; } </style>';
         }
         else  {
@@ -39,7 +39,7 @@
 
             if (file_exists($wordpress_zip)) {
                 echo "Wordpress zip file exist";
-            } 
+            }
             else {
                 $url = 'https://wordpress.org/latest.zip';
                 $file = "latest.zip";
@@ -112,10 +112,10 @@
             $f=fopen($path.'/'.$sitename.'.com/'.'wp-config.php',"w");
 
             foreach($fc as $line){
-                if (!strstr($line,$key)) 
+                if (!strstr($line,$key))
                     fputs($f,$line);
             }
-            fclose($f);  
+            fclose($f);
 
             #lets craete the host files for the site
             $httpd_vhostsfile = '/Applications/MAMP/conf/apache/extra/httpd-vhosts.conf';
@@ -127,7 +127,7 @@
 
     // Here we define the string data that is to be placed into the file
     $VirtualHost = '
-<VirtualHost *:80> 
+<VirtualHost *:80>
     ServerAdmin admin@'.$sitename.'.com
     DocumentRoot '.$path.'/'.$sitename.'.com'.'
     ServerName '.$sitename.'.dev'.'
@@ -136,14 +136,14 @@
 </VirtualHost>
 ';
 
-            $mamphost = fopen($httpd_vhostsfile, "a+"); 
-            $host_file = fopen($privatehostfile, "a+"); 
+            $mamphost = fopen($httpd_vhostsfile, "a+");
+            $host_file = fopen($privatehostfile, "a+");
 
-            fwrite($mamphost, $VirtualHost); // write it 
-            fwrite($host_file, $localhost_site); // write it 
+            fwrite($mamphost, $VirtualHost); // write it
+            fwrite($host_file, $localhost_site); // write it
 
-            fclose($mamphost); 
-            fclose($host_file); 
+            fclose($mamphost);
+            fclose($host_file);
 
 
             echo "<p class='bg-success'> <span class='glyphicon glyphicon-exclamation-sign'></span> Virtual Host Added to MAMP -> $httpd_vhostsfile </p>";
@@ -160,7 +160,7 @@
                 // Check connection
                 if ($conn->connect_error) {
                     die("MYSQL Connection failed: " . $conn->connect_error);
-                } 
+                }
 
                 // Create database
                 $sql = "CREATE DATABASE ".$dbname."";
@@ -211,5 +211,5 @@
             <a href="http://<?php echo $sitename.'.dev/'; ?>" id="openwp" type="submit" name="openwp" class="btn btn-danger btn-lg">Open > <?php echo $sitename.'.dev'; ?></a>
         </div>
     </form>
-</div> 
+</div>
 

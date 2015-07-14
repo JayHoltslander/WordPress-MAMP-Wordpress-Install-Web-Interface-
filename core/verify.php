@@ -1,8 +1,8 @@
 <?php
     if(!defined('WPINSTALL')) {die('Direct access not permitted'); }
 ?>
- 
-<style type="text/css"> .step1 {display: none; } </style> 
+
+<style type="text/css"> .step1 {display: none; } </style>
 
 <div class="row step2">
     <div class="downlaod">
@@ -59,10 +59,9 @@
             </div>
             <div class="clear"></div>
 
-
             <div class="controls">
-                <form id="getconfig" method="POST" name="getconfig" action="/index.php?step=install">
-                    <div class="col-sm-3">
+                <form id="getconfig" method="POST" name="getconfig" action="<?php if ($action_url = parse_url($action_link)) {printf('%s://%s%s', $action_url['scheme'], $action_url['host'], $action_url['path']); } ?>?step=install">
+                <div class="col-sm-3">
                         <input id="edit" class="btn btn-default btn-lg" type="button" value="Edit" onclick="history.back();">
                     </div>
                     <div class="col-sm-9">
