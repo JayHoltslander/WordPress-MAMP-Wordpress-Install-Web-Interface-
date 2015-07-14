@@ -21,7 +21,7 @@
     define('WPINSTALL', TRUE);
     define('DOCUMENT_ROOT', dirname(__file__).'/');
 
-    $current_version = '1.0.7';
+    $current_version = '1.0.8';
     $nullpath = '';
     $action_link = 'http://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
     $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
