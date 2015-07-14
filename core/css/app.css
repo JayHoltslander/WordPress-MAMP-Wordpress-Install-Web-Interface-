@@ -7782,7 +7782,7 @@ body.install {
     border-right: 1.1em solid rgba(244, 55, 63, 0.8);
     border-bottom: 1.1em solid rgba(244, 55, 63, 0);
     /*border-left: 1.1em solid #fff;*/
-    
+
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
     transform: translateZ(0);
@@ -8004,4 +8004,13 @@ a span.update-bg {
 }
 .center {
     text-align: center;
+}
+.close-sites {
+  position: relative;
+  top: -45px;
+  right: 0;
+  text-align: right;
+  font-size: 26px;
+  margin: -55px 0 -18px 0;
+  opacity: 0.5;
 }

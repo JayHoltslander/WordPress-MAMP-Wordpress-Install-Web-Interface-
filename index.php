@@ -94,6 +94,7 @@
 
     <div id="sitemanager" class="showsites" style="display:none">
         <div class="body">
+        <div class="close-sites"> X </div>
             <?php
                 $row = exec('cd '.$localhostpath.'; ls ',$output,$error);
                 if($error){

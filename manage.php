@@ -1,14 +1,14 @@
-<?php 
+<?php
 // @Author: Michel Velis
 // @Repository: https://github.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-
-// @Version: 1.0.6
+// @Version: 1.0.8
 // @Author URL: https://velismichel.com
 
 
-define('WPINSTALL', TRUE); 
+define('WPINSTALL', TRUE);
 define('DOCUMENT_ROOT', dirname(__file__).'/');
-// ob_start(); 
-// session_start(); 
+// ob_start();
+// session_start();
 
 // Report runtime errors
 error_reporting(0);
@@ -21,7 +21,7 @@ if(file_exists('/Applications/MAMP/bin/phpMyAdmin/config.inc.php')) {
   include_once('/Applications/MAMP/bin/phpMyAdmin/config.inc.php');
 }
 
-$current_version = '1.0.6';
+$current_version = '1.0.8';
 $nullpath = '';
 $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 $localhostpath = pathinfo(realpath($nullpath), PATHINFO_DIRNAME);
@@ -43,7 +43,7 @@ elseif(isset($_POST['wpcontentdir']) && isset($_POST['uplaoddir']) && isset($_PO
     $wp_rename = '<?php '. "\n"
     			.'$wpcontentdir = '.'\''.$_POST['wpcontentdir'].'\';' . "\n"
     			.'$uplaoddir  = '.'\''.$_POST['uplaoddir'].'\';'  . "\n"
-    			.'$plugins  = '.'\''.$_POST['plugins'].'\';' 
+    			.'$plugins  = '.'\''.$_POST['plugins'].'\';'
     			. "\n".'?>';
     $wp_ren = file_put_contents('core/temp/config.php', $wp_rename, LOCK_EX);
     if($wp_ren === false) {
@@ -95,8 +95,8 @@ $config_file_path = 'core/temp/config.php';
           echo '<div class="clear"></div>
                   <div class="col-sm-12">
                     <div class="col-sm-6">
-                      <span class="glyphicon glyphicon-home" aria-hidden="true"></span>  
-                      <a href="http://'.$row.'" target="_blank"> '.$row.'</a> 
+                      <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                      <a href="http://'.$row.'" target="_blank"> '.$row.'</a>
                     </div>
                     <div class="col-sm-2 btn btn-info white">
                         <a target="_blank" href="http://'.$row.'">View Site</a>
@@ -117,14 +117,14 @@ $config_file_path = 'core/temp/config.php';
 
 	<div class="container main-wrapper wpmanager">
 		<div class="row">
-			
-		        
+
+
 		         	<div class="col-sm-6 dbinfo">
 		         		<fieldset>
 			         		<form class="form-horizontal col-sm-12 wp" action="manage.php?action=setupconfig" method="POST" name="managewpd">
 					            <div class="col-sm-12 wp-manage">
 						                <h2>WP Manager</h2>
-						    			 <!--   <div class="col-sm-6 check-req">                  
+						    			 <!--   <div class="col-sm-6 check-req">
 						                  <a href="#req" data-toggle="modal" data-target="#checkreqs"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Check App   </a>
 						                </div> -->
 						                <div class="clear"></div>
@@ -183,7 +183,7 @@ $config_file_path = 'core/temp/config.php';
 
 			        <!-- check validation -->
 			        <div class="col-sm-6 get-config">
-			        	 <?php 
+			        	 <?php
 						     if (strpos($url,'?action=setupconfig') !== false) {
 						     	include $wp_file_path;
 						     	$sitemanager = $localhostdir.''.$site_selected;
@@ -226,7 +226,7 @@ $config_file_path = 'core/temp/config.php';
 								  <button name="config_wp_content" type="submit" class="btn btn-danger">Rebuild Structure</button>
 								</form>
 							';
-							} 
+							}
 
 							//verify info
 							elseif (strpos($url,'?action=verify') !== false){
@@ -261,7 +261,7 @@ $config_file_path = 'core/temp/config.php';
 								         </form>
 
 								  ';
-									
+
 
 
 								}
@@ -286,11 +286,11 @@ $config_file_path = 'core/temp/config.php';
 								}
 								else{
 									rename($sitemanager.'/wp-content/uploads', $sitemanager.'/wp-content/'.$uplaoddir);
-									echo "<p class='bg-success'> <span class='glyphicon glyphicon-exclamation-sign'></span> uploads folder rename successfully </p>";									
+									echo "<p class='bg-success'> <span class='glyphicon glyphicon-exclamation-sign'></span> uploads folder rename successfully </p>";
 								}
 
 
-					
+
 								if (file_exists($sitemanager.'/'.$wpcontentdir.'/'.$plugins)) {
 									//rename plugins dir
 									echo "<p class='bg-danger'> <span class='glyphicon glyphicon-exclamation-sign'></span> $plugins folder already exist </p>";
@@ -308,7 +308,7 @@ $config_file_path = 'core/temp/config.php';
 								}
 								else{
 									rename($sitemanager.'/wp-content', $sitemanager.'/'.$wpcontentdir);
-									echo "<p class='bg-success'> <span class='glyphicon glyphicon-exclamation-sign'></span> wp-content folder rename successfully </p>";									
+									echo "<p class='bg-success'> <span class='glyphicon glyphicon-exclamation-sign'></span> wp-content folder rename successfully </p>";
 								}
 
 								//update wp-config file
@@ -350,7 +350,7 @@ $config_file_path = 'core/temp/config.php';
 
 								         </form>
 								  </div>
-								</div>	';						
+								</div>	';
 
 							}
 
@@ -403,8 +403,8 @@ define( "UPLOADS", WP_CONTENT_FOLDERNAME . "/'.$uplaoddir.'");';
 							}
 					    ?>
 			        </div>
-			    
-			
+
+
 		</div>
 	</div>
 <div class="clear"></div>
@@ -448,4 +448,4 @@ define( "UPLOADS", WP_CONTENT_FOLDERNAME . "/'.$uplaoddir.'");';
     <script type="text/javascript" src="core/js/app.js"></script>
 
 </body>
-</html> 
+</html>

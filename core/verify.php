@@ -1,6 +1,4 @@
-<?php
-    if(!defined('WPINSTALL')) {die('Direct access not permitted'); }
-?>
+<?php if(!defined('WPINSTALL')) {die('Direct access not permitted'); } ?>
 
 <style type="text/css"> .step1 {display: none; } </style>
 
