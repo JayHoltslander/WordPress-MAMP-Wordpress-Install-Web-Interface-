@@ -22,7 +22,7 @@
                 print('<a target="_blank" href="https://github.com/michelve/WordPress-MAMP-Wordpress-Install-Web-Interface-"> <span class="badge update-bg"> Update Available! </span></a>');
                 $u_notice = '<div class="alert alert-info alert-dismissible animated slideInDown center" role="alert">
                   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <strong>Warning!</strong> There is a new version update for this app. Update as soon as possible.
+                  <strong>Warning!</strong> There is an update for this app. Update as soon as possible.
                 </div>';
                 }
             ?>

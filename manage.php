@@ -128,7 +128,7 @@ $config_file_path = 'core/temp/config.php';
 						                  <a href="#req" data-toggle="modal" data-target="#checkreqs"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Check App   </a>
 						                </div> -->
 						                <div class="clear"></div>
-						                <p class="info">Lets make your Wordpress Install Secure and more customized</p>
+						                <p class="info">Make your Wordpress installations more secure with a custom configuration.</p>
 						        </div>
 					            <!-- <div class="col-sm-9">
 					                <h4>Site Info</h4>
@@ -141,14 +141,14 @@ $config_file_path = 'core/temp/config.php';
 						                <label class="col-sm-4 control-label" for="localhostdir">Localhost Dir Path</label>
 						                <div class="controls col-sm-8">
 						                  <input type="text" id="localhostdir" name="localhostdir" placeholder="the absolute path to your localhost" value="<?php echo $localhostpath.'/';?>" class="form-control" required>
-						                  <p class="text-muted">by default we will try to get the path from your localhost if you path is diff corrected it now</p>
+						                  <p class="text-muted">By default the path is determined from your localhost. If your path is different, correct it now.</p>
 						                </div>
 					            </div>
 					            <div class="clear"></div>
 
 					            <div class="control-group">
 						                <!-- Username -->
-						                <label class="control-label col-sm-4" for="sitename">Site To Configure</label>
+						                <label class="control-label col-sm-4" for="sitename">Site to configure</label>
 						                <div class="controls col-sm-8">
 						                  <select id="sitemanager" name="sitemanager">
 						                    	<?php
@@ -174,7 +174,7 @@ $config_file_path = 'core/temp/config.php';
 					            <div class="col-sm-6 control-group">
 							            <!-- Button -->
 							            <div class="controls">
-							              <button type="submit" name="managewp" class="btn btn-success btn-lg btn-block">Reload Site Config</button>
+							              <button type="submit" name="managewp" class="btn btn-success btn-lg btn-block">Load configuration</button>
 							            </div>
 						        </div>
 					        </form>
@@ -187,43 +187,43 @@ $config_file_path = 'core/temp/config.php';
 						     if (strpos($url,'?action=setupconfig') !== false) {
 						     	include $wp_file_path;
 						     	$sitemanager = $localhostdir.''.$site_selected;
-						     	echo "<h5>Rename WP Folders</h5>";
+						     	echo "<h5>Rename Wordpress&#146; default folders</h5>";
 								$setup_file = 'setup.php';
 								if(file_exists($sitemanager.'/'.$setup_file)) {
 								  echo '<p class="bg-info"><strong>Site Path:</strong> '.$sitemanager.'<br> </p>';
 								  $path_toConfig = $sitemanager.'/'.$setup_file;
 								  include $path_toConfig;
-								  echo "<p class='bg-success'> <span class='glyphicon glyphicon-exclamation-sign'></span> Setup file found and Loaded </p>";
+								  echo "<p class='bg-success'> <span class='glyphicon glyphicon-exclamation-sign'></span> &#34;setup.php&#34; found and loaded.</p>";
 
 								}
 								else {
-									echo "<p class='bg-danger'> <span class='glyphicon glyphicon-exclamation-sign'></span> setup.php file was not found on that site. </p>";
+									echo "<p class='bg-danger'> <span class='glyphicon glyphicon-exclamation-sign'></span> The file &#34;setup.php&#34; was not found within that site&#146;s folder.</p>";
 								}
 							echo '
 								<form id="wpcontent" action="manage.php?action=verify" method="POST" class="form-horizontal" name="config_wp_content">
 
 								  <div class="clear"></div>
 								  <div class="form-group col-sm-6">
-								    <label for="wpcontentdir">WP Content Dir</label>
-								    <input type="text" name="wpcontentdir" class="form-control" id="wpcontentdir" placeholder="rename wp-content">
-								    <p>enter the new for wp-content</p>
+								    <label for="wpcontentdir">Content directory</label>
+								    <input type="text" name="wpcontentdir" class="form-control" id="wpcontentdir" placeholder="wp-content">
+								    <p>Enter a new name for the wp-content directory</p>
 								  </div>
 
 								  <div class="form-group col-sm-6">
-								    <label for="uplaoddir">WP Upload Dir</label>
-								    <input name="uplaoddir" type="text" class="form-control" id="uplaoddir" placeholder="rename wp-uploads">
-								    <p>enter the new for wp-uploads</p>
+								    <label for="uplaoddir">Uploads directory</label>
+								    <input name="uplaoddir" type="text" class="form-control" id="uplaoddir" placeholder="wp-uploads">
+								    <p>Enter a new name for the wp-uploads directory</p>
 								  </div>
 								  <div class="clear"></div>
 								  <hr>
 								  <div class="form-group col-sm-12">
-								    <label for="plugins">Rename Plugins Dir</label>
-								    <input type="text" name="plugins" class="form-control" id="plugins" placeholder="rename plugins dir">
-								    <p>enter the new for plugins</p>
+								    <label for="plugins">Plugins directory</label>
+								    <input type="text" name="plugins" class="form-control" id="plugins" placeholder="plugins">
+								    <p>Enter the new name for the plugins directory.</p>
 								  </div>
 								  <hr>
 								  <div class="clear"></div>
-								  <button name="config_wp_content" type="submit" class="btn btn-danger">Rebuild Structure</button>
+								  <button name="config_wp_content" type="submit" class="btn btn-danger">Rebuild structure</button>
 								</form>
 							';
 							}
@@ -240,7 +240,7 @@ $config_file_path = 'core/temp/config.php';
 								  echo '<p class="bg-info"><strong>Site Path:</strong> '.$sitemanager.'<br> </p>';
 								  $path_toConfig = $sitemanager.'/'.$setup_file;
 								  include $path_toConfig;
-								  echo "<p class='bg-success'> <span class='glyphicon glyphicon-exclamation-sign'></span> Setup file found and Loaded </p>";
+								  echo "<p class='bg-success'> <span class='glyphicon glyphicon-exclamation-sign'></span> Setup file found and loaded </p>";
 
 								  echo "<p class='verify-title'>Verify the below information</p>";
 								  echo "<div class='confirm bg-info'>";
@@ -252,10 +252,10 @@ $config_file_path = 'core/temp/config.php';
 
 								  echo '
 								         <form class="rename-step2" method="POST" action="manage.php?action=rename">
-								         <a class="btn btn-default" href="javascript:history.go(-1)">Make Changes</a>
+								         <a class="btn btn-default" href="javascript:history.go(-1)">Make changes.</a>
 
 								         <button name="renamewp" type="submit" class="btn btn-danger">
-											OK, Looks Good</button>
+											OK. Looks good.</button>
 										</form>
 
 								         </form>
@@ -266,7 +266,7 @@ $config_file_path = 'core/temp/config.php';
 
 								}
 								else {
-									 echo "<p class='brand-danger'> <span class='glyphicon glyphicon-exclamation-sign'></span> Setup file not found processed at your own risk</p>";
+									 echo "<p class='brand-danger'> <span class='glyphicon glyphicon-exclamation-sign'></span> Setup file not found. Proceed at your own risk</p>";
 								}
 							}
 
@@ -282,11 +282,11 @@ $config_file_path = 'core/temp/config.php';
 								//rename uploads dir
 								if (file_exists($sitemanager.'/'.$wpcontentdir.'/'.$uplaoddir)) {
 									//rename uploads folder
-									echo "<p class='bg-danger'> <span class='glyphicon glyphicon-exclamation-sign'></span> $uplaoddir folder already exist </p>";
+									echo "<p class='bg-danger'> <span class='glyphicon glyphicon-exclamation-sign'></span> $uplaoddir folder already exists </p>";
 								}
 								else{
 									rename($sitemanager.'/wp-content/uploads', $sitemanager.'/wp-content/'.$uplaoddir);
-									echo "<p class='bg-success'> <span class='glyphicon glyphicon-exclamation-sign'></span> uploads folder rename successfully </p>";
+									echo "<p class='bg-success'> <span class='glyphicon glyphicon-exclamation-sign'></span> uploads folder renamed successfully </p>";
 								}
 
 
@@ -297,18 +297,18 @@ $config_file_path = 'core/temp/config.php';
 								}
 								else{
 									rename($sitemanager.'/wp-content/plugins', $sitemanager.'/wp-content/'.$plugins);
-									echo "<p class='bg-success'> <span class='glyphicon glyphicon-exclamation-sign'></span> plugins folder rename successfully </p>";
+									echo "<p class='bg-success'> <span class='glyphicon glyphicon-exclamation-sign'></span> plugins folder renamed successfully </p>";
 								}
 
 
 
 								if (file_exists($sitemanager.'/'.$wpcontentdir)) {
 									//rename wp-content dir
-									echo "<p class='bg-danger'> <span class='glyphicon glyphicon-exclamation-sign'></span> $wpcontentdir folder already exist </p>";
+									echo "<p class='bg-danger'> <span class='glyphicon glyphicon-exclamation-sign'></span> $wpcontentdir folder already exists </p>";
 								}
 								else{
 									rename($sitemanager.'/wp-content', $sitemanager.'/'.$wpcontentdir);
-									echo "<p class='bg-success'> <span class='glyphicon glyphicon-exclamation-sign'></span> wp-content folder rename successfully </p>";
+									echo "<p class='bg-success'> <span class='glyphicon glyphicon-exclamation-sign'></span> wp-content folder renamed successfully </p>";
 								}
 
 								//update wp-config file
@@ -340,12 +340,12 @@ $config_file_path = 'core/temp/config.php';
 								    <h3 class="panel-title">Let the app create it for you</h3>
 								  </div>
 								  <div class="panel-body">
-								    <p class="bg-info">we will create a backup of wp-config.php called wp-config.php.old (make sure youd otn upload this file to your prodction server.</p>
+								    <p class="bg-info">we will create a backup of wp-config.php called wp-config.php.old (Make sure you don&#146;t upload this file to your production server.</p>
 								    <form class="rename-step2" method="POST" action="manage.php?action=wpconfig">
-								         <a class="btn btn-default" href="manage.php">Is Fine, I got it ..</a>
+								         <a class="btn btn-default" href="manage.php">It&#146;s fine. I&#146;ve got it.</a>
 
 								         <button name="wpconfig" type="submit" class="btn btn-danger">
-											OK, Do it for me</button>
+											OK, Do it for me.</button>
 										</form>
 
 								         </form>
@@ -372,7 +372,7 @@ $config_file_path = 'core/temp/config.php';
 								}
 
 								if (file_exists('core/temp/sites/'.$site_selected)) {
-								    echo "<p class='bg-danger'> <span class='glyphicon glyphicon-exclamation-sign'></span> You have already rename this site. Please select another site</p>";
+								    echo "<p class='bg-danger'> <span class='glyphicon glyphicon-exclamation-sign'></span> You have already renamed this site. Please select another site</p>";
 
 								} else {
 								    //file_put_contents($filename, '');
@@ -399,7 +399,7 @@ define( "UPLOADS", WP_CONTENT_FOLDERNAME . "/'.$uplaoddir.'");';
 								echo "<p class='bg-info'> <span class='glyphicon glyphicon-exclamation-sign'></span> seetings added to wp-config.php </p>";
 								file_put_contents('core/temp/sites/'.$site_selected, 'Site Built on: '.date('l jS \of F Y h:i:s A'));
 								}
-								echo " <br> <br> <a class='btn btn-warning btn-block' href='manage.php'>You are Done, Close this</a>";
+								echo " <br> <br> <a class='btn btn-warning btn-block' href='manage.php'>You are done. Close this</a>";
 							}
 					    ?>
 			        </div>

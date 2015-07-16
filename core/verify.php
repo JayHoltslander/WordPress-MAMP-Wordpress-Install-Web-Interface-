@@ -63,7 +63,7 @@
                         <input id="edit" class="btn btn-default btn-lg" type="button" value="Edit" onclick="history.back();">
                     </div>
                     <div class="col-sm-9">
-                        <input id="getconfig" type="submit" value="Download and Install Worpress" name="getconfig" class="btn btn-danger btn-lg" />
+                        <input id="getconfig" type="submit" value="Download and install Wordpress" name="getconfig" class="btn btn-danger btn-lg" />
                     </div>
                 </form>
             </div>

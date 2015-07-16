@@ -23,7 +23,7 @@
                         <label class="col-sm-4 control-label" for="localhostdir">LocalHost Path</label>
                         <div class="controls col-sm-8">
                             <input type="text" id="localhostdir" name="localhostdir" placeholder="the absolute path to your localhost" value="<?php echo $localhostpath.'/';?>" class="form-control" data-toggle="tooltip" title="This is where all your local files/sites are">
-                            <p class="text-muted">by default we will try to get the path from your localhost if you path is diff corrected it now</p>
+                            <p class="text-muted">By default the path is determined from your localhost. If your path is different, correct it now.</p>
                         </div>
                     </div>
                     <div class="clear"></div>
@@ -32,7 +32,7 @@
                         <label class="control-label col-sm-4" for="sitename">Site Name</label>
                         <div class="controls col-sm-8">
                             <input type="text" id="sitename" name="sitename" placeholder="mysitename" class="form-control">
-                            <p class="text-muted">do not add .com or .dev It will be added automatically</p>
+                            <p class="text-muted">Do not add .com or .dev. It will be added automatically.</p>
                         </div>
                     </div>
                     <div class="clear"></div>
@@ -53,7 +53,7 @@
                         <label class="control-label" for="host">Database Host</label>
                         <div class="controls">
                             <input type="text" id="host" name="host" value="127.0.0.1:<?php echo $cfg['Servers'][1]['port'] ? $cfg['Servers'][1]['port'] : "3306"; ?>" class="form-control" data-toggle="tooltip" title="If these values do not match. Open MAMP > Preferences > Ports and see which port mysql is using" required>
-                            <p class="text-muted">We will try to get the default values from MAMP. <strong>Usually is:</strong> 3306 or 8889</p>
+                            <p class="text-muted">We will try to get the default values from MAMP. &#40;Usually port 3306 or 8889&#41;</p>
                         </div>
                     </div>
                     <div class="control-group col-sm-6">
@@ -61,7 +61,7 @@
                         <label class="control-label" for="dbname">Database Name</label>
                         <div class="controls">
                             <input type="text" id="dbname" name="dbname" placeholder="ex: db_mysite" class="form-control" required>
-                            <p class="text-muted">name your database</p>
+                            <p class="text-muted">Name site&#146;s database</p>
                         </div>
                     </div>
                     <div class="clear"></div>
@@ -87,7 +87,7 @@
                         <label class="control-label" for="dbprefix">Database Prefix</label>
                         <div class="controls">
                             <input type="text" id="dbprefix" name="dbprefix" value="PrX_" class="form-control" data-toggle="tooltip" title="It is recommended to change your default wp_ database prefix for security reasons" required>
-                            <p class="text-muted">Note: is recommended to use something else than wp_ for security reasons.</p>
+                            <p class="text-muted">Note: It is recommended to use something other than wp_ for security reasons.</p>
                         </div>
                     </div>
                 </div>

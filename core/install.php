@@ -10,10 +10,10 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <div class="infobox"> i </div>
-                <h4 class="modal-title" id="myModalLabel">Re-Start MAMP</h4>
+                <h4 class="modal-title" id="myModalLabel">Re-start MAMP</h4>
             </div>
             <div class="modal-body">
-                Please re-start MAMP to continue with the installation, Once you have done that close this box.
+                Please re-start MAMP to continue with the installation. Once you have done that you may close this box.
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-info" data-dismiss="modal">Done, I Have Restarted It.</button>
@@ -27,7 +27,7 @@
     <?php
         if (is_dir($localhostpath.'/'.$sitename.'.com/') == true) {
             $class = 'hide';
-            echo '<div class="alert alert-danger" role="alert"> <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> <span class="sr-only">Error:</span> Site '.$sitename.'.com exist </div>';
+            echo '<div class="alert alert-danger" role="alert"> <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> <span class="sr-only">Error:</span> Site '.$sitename.'.com exists </div>';
             echo '<style type="text/css"> .step2 {display: block; } .step1. .col-sm-3 {display: none; } </style>';
         }
         else  {
@@ -62,7 +62,7 @@
                   $zip->close();
                   rename ($path.'/wordpress', $path.'/'.$sitename.'.com');
                   unlink('latest.zip');
-                  echo "<p class='bg-success'> <span class='glyphicon glyphicon-compressed'></span> GREAT: $wordpresszip extracted to $path </p>";
+                  echo "<p class='bg-success'> <span class='glyphicon glyphicon-compressed'></span> SUCCESS: $wordpresszip extracted to $path </p>";
                   mkdir($path.'/'.$sitename.'.com/wp-content/uploads', 0755);
                 }
                 else {
@@ -177,12 +177,12 @@
                 // flush dns
                 system('dscacheutil -flushcache');
                 echo "<p class='bg-warning'> <span class='glyphicon glyphicon-exclamation-sign'></span>  Flushing DNS</p>";
-                echo "<p class='bg-warning'> <span class='glyphicon glyphicon-exclamation-sign'></span> MAMP was Re-started</p>";
+                echo "<p class='bg-warning'> <span class='glyphicon glyphicon-exclamation-sign'></span> MAMP was re-started</p>";
                 echo "<style> body.install {background: none; background-color: #ecf0f1;}</style>";
                 echo '<script> $("#mamp-restart").modal("show"); </script>';
             }
             else {
-                echo "<p class='bg-danger'> <span class='glyphicon glyphicon-exclamation-sign'></span>  The hosts file is not writable at -> $privatehostfile (fix this issue).</p>";
+                echo "<p class='bg-danger'> <span class='glyphicon glyphicon-exclamation-sign'></span>  The hosts file is NOT writable at -> $privatehostfile (fix this issue).</p>";
                 echo "<p class='bg-danger'> <span class='glyphicon glyphicon-exclamation-sign'></span>  Installation cancelled.</p>";
             }
             echo ' <style type="text/css"> #getconfig {display: none; } </style>';
